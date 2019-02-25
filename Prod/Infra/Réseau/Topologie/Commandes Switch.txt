@@ -1,0 +1,28 @@
+--
+-- ─── COMMANDES COMMUNES ─────────────────────────────────────────────────────────
+--
+Switch_X> enable
+Switch_X# configure terminal
+Switch_X#(config) hostname [name]
+Switch_X#(config) no logging console
+Switch_X#(config) no ip domain lookup
+
+Switch_X#(config)vlan X
+Switch_X#(config)name [name]
+
+Switch_X#(config) interface gigabitEthernet X/X
+Switch_X#(config-if) switchport trunk encapsulation dot1q
+Switch_X#(config-if) switchport mode trunk
+Switch_X#(config-if) switchport trunk allowed vlan X
+Switch_X#(config-if) exit
+
+Switch_X#(config) interface gigabitEthernet X/X
+Switch_X#(config-if) switchport mode access
+Switch_X#(config-if) switchport access vlan X
+Switch_X#(config-if) exit
+
+
+
+
+
+    

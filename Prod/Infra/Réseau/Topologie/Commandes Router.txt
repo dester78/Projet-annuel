@@ -1,0 +1,90 @@
+[nhrp authentification name] : ffw
+[ipsec profile] : ffwprof
+[transform set] : ffwset
+
+
+--
+-- ─── COMMANDES COMMUNES ─────────────────────────────────────────────────────────
+--
+Router_X> enable
+Router_X# configure terminal
+Router_X#(config) hostname [name]
+Router_X#(config) no logging console
+Router_X#(config) no ip domain lookup
+
+Router_X#(config) interface gigabitEthernet X/X
+Router_X#(config-if) no shutdown
+Router_X#(config-if) ip address [@IP] [MASK]
+Router_X#(config-if) exit
+
+Router_X#(config) interface gigabitEthernet X/X.X
+Router_X#(config-if) no shutdown
+Router_X#(config-if) encapsulation dot1Q X
+Router_X#(config-if) ip address [@IP] [MASK]
+Router_X#(config-if) exit
+
+
+
+--
+-- ─── AJOUT D'UN AGENT RELAY DHCP ─────────────────────────────────────────────────
+--
+Router_X#(config) interface gigabitEthernet X/X
+Router_X#(config-if) ip helper-address [IP SERV DHCP ou IP NET SERV DHCP]
+
+
+--
+-- ─── ROUTAGE RIPV2 ──────────────────────────────────────────────────────────────
+--
+Router_X#(config) router rip
+Router_X#(config-router) version 2
+Router_X#(config-router) network [IP network]
+Router_X#(config-router) passive-interface gigabitEthernet X/X
+Router_X#(config-router) exit
+
+--
+-- ─── CREATION HUB DMVPN ──────────────────────────────────────────────────────────────
+--
+
+Router_X#(config) interface tunnel X
+Router_X#(config-if) tunnel mode gre multipoint
+Router_X#(config-if) tunnel source gigabitEthernet X/X
+Router_X#(config-if) ip addr X.X.X.X X.X.X.X
+Router_X#(config-if) ip nhrp network-id X
+Router_X#(config-if) ip nhrp multicast dynamic
+Router_X#(config-if) ip nhrp authentification [nhrp authentification name]
+Router_X#(config-if) exit
+
+--
+-- ─── CREATION SPOKE DMVPN ──────────────────────────────────────────────────────────────
+--
+
+Router_X#(config) interface tunnel X
+Router_X#(config-if) tunnel mode gre multipoint
+Router_X#(config-if) tunnel source gigabitEthernet X/X
+Router_X#(config-if) ip addr X.X.X.X X.X.X.X
+Router_X#(config-if) ip nhrp map multicast [public ip hub]
+Router_X#(config-if) ip nhrp map [private ip hub]
+Router_X#(config-if) ip nhrp nhs [private ip hub]
+Router_X#(config-if) ip nhrp network-id X
+Router_X#(config-if) exit
+
+--
+-- ─── CRYPTAGE VPN ───────────────────────────────────────────────────────────────
+--
+
+Router_X#(config) crypto isakmp policy 1 
+Router_X#(config-isakmp) encryption aes 256
+Router_X#(config-isakmp) hash sha
+Router_X#(config-isakmp) authentification pre-share
+Router_X#(config-isakmp) group 5
+Router_X#(config-isakmp) lifetime 85000
+Router_X#(config-isakmp) exit
+
+Router_X#(config) crypto isakmp key 6 [nhrp authentification name] address 0.0.0.0
+
+Router_X#(config) crypto ipsec profile [ipsec profile]
+Router_X#(ipsec-profile) set transform-set [transform set]
+Router_X#(ipsec-profile) set security-association lifetime seconds 85000
+
+Router_X#(config) tunnel X
+Router_X#(config) tunnel protection ipsec profil [ipsec profile]
