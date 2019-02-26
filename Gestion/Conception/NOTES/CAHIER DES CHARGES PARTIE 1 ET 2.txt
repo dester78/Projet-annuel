@@ -1,0 +1,77 @@
+CAHIER DES CHARGES APPLI C
+
+Particulier -> scanner article
+Particulier -> appuie sur le boutton -> envoi liste d'articles
+Particulier -> recoit mail confirmation
+
+CAHIER DES CHARGES SITE WEB
+
+/Visiteurs
+	Page d'acceuil
+	Appli WebGl
+	Infos
+	Contact
+	-> je suis commercant et je souhaite participer
+	-> je souhaite devenir adhérent
+	-> je souhaite devenir bénévole
+
+DECIDE 26/02: un unique compte, eventuellement plusieurs espaces (A + B, ou A, ou B, ou C) (C distinct)
+	
+	-> Mon espace adhérent
+	
+
+/ Espace adhérent
+
+	-> infos compte
+	-> infos adhésion
+	-> renouveler adhésion
+	-> je souhaite recevoir le scanner
+	-> prochaine collecte
+	-> déconnexion
+
+/ backoffice
+	liste des adhérents
+	infos adhérents
+	
+	Espace Collectes
+		Propositions dons de produits (-> si refus => mail de refus)
+		ajouter des points de collecte à une tournée
+		Générer une tournée => émettre mails de confirmations => générer feuille d'étapes
+	Espace stock
+		Trier par 
+			lieu de stockage
+			type de produit
+			allée de stockage
+			...
+		retirer/ ajouter manuellement un produit
+	Espace livraison
+		planning / liste des livraisons
+		planifier/ annuler une livraison
+
+	
+	Suivi des bénévoles
+		récéption des inscriptions ? ou par mail?
+		création des bénévoles
+		liste/ ajout de droits / suppression
+		affectations des lieux, comptétences par bénévole
+		Envoi des plannings
+	
+	Gestion des services
+		Créations des évenements
+			Affectation d'un lieu, d'un (des) bénévole
+			Vérification des conflits
+		Edit des évenements
+	
+	Gestion des annonces des adhérents
+		Liste, recherche des annonces
+		Modération des annonces
+
+
++ APPLI JAVA DE SUGGESTION DE MENU, RELIEE AU STOCK
+
+
+
+
+
+		
+		
