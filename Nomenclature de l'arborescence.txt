@@ -1,0 +1,25 @@
+Prod/
+	Infra/
+		Réseau/
+			Topologie/ 
+
+			Plan d'adressage/
+		Serv/
+			[Nom du serveur]/ #Dossier d'un serveur 
+					
+				
+	Apps/ #Les différentes applciations du projet, site web, application C etc...
+		[Nom de l'application]/ #Arborescence à déterminer en fonction de l'application développée
+		
+Docs/
+	Gantt/ #Planification du projet, le gantt est fait sur teamgantt.com, mais les exports PDFs sont dans ce dossier
+	CR/ #Compte rendu de réunion
+	CCF/ #Cahier des charges fonctionnel 
+	Maquette/ #Maquettes 
+	UML/ #Unified modeling langage
+	BDD/ #Base de données
+	CG/ #Charte graphique
+	Doc technique/ #Documentation technique
+	
+		
+Utils/

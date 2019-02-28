@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "C_Scan"
+		},
+		{
+			"path": "C_Scan\\lib"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"string.h": "c",
+			"stdio.h": "c",
+			"jsonhandler.h": "c"
+		}
+	}
+}

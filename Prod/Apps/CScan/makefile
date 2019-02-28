@@ -31,6 +31,12 @@ $(EXEC): main.o
 
 main.o: $(S_DIR)/main.c $(H_DIR)/main.h
 	$(CC)  -o main.o -c $(S_DIR)/main.c $(CFLAGS) $(CPPFLAGS) 
+curlHandler.o: $(S_DIR)/curlHandler.c $(H_DIR)/curlHandler.h
+	$(CC)  -o curlHandler.o -c $(S_DIR)/curlHandler.c $(CFLAGS) $(CPPFLAGS)
+fileHandler.o: $(S_DIR)/fileHandler.c $(H_DIR)/fileHandler.h
+	$(CC)  -o fileHandler.o -c $(S_DIR)/fileHandler.c $(CFLAGS) $(CPPFLAGS)
+jsonHandler.o: $(S_DIR)/jsonHandler.c $(H_DIR)/jsonHandler.h
+	$(CC)  -o jsonHandler.o -c $(S_DIR)/jsonHandler.c $(CFLAGS) $(CPPFLAGS)
 
 clean:
 	rm *.o core
