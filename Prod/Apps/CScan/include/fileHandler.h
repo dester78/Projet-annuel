@@ -11,6 +11,8 @@ typedef struct File{
 }File;
 
 File *initFileElement(char *fileName, char *path, char *openMode);
+File **initFileIndex(char *fileIndexPath);
+
 
 
 
@@ -32,6 +34,9 @@ FILE *openFluxFile(char *fileName, char *openMode);
 /*
  * ─── FONCTIONS DE LECTURE DE FICHIERS ───────────────────────────────────────────
  */
+unsigned long countFileChar(FILE *filePtr);
+char *getFileContent(FILE *filePtr);
+
 
 //Fonction remplissant un tableau de pointeur de tableau de chaine de caractère, la variable lastRow est modifié pour pouvoir parcourir ce tableau en dehors de la fonction
 short returnConfigFileParameters(FILE *configFile, int *lastRow,char ***arrayParameters );

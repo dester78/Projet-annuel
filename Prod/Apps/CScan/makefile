@@ -26,14 +26,14 @@ EXEC=main
 
 all: $(EXEC)
 
-$(EXEC): main.o
-	$(CC) $(CFLAGS) -o $(EXEC)  main.o $(LDFLAGS) $(CPPFLAGS)  $(LDLIBS)
+$(EXEC): main.o jsonHandler.o fileHandler.o
+	$(CC) $(CFLAGS) -o $(EXEC)  main.o jsonHandler.o fileHandler.o $(LDFLAGS) $(CPPFLAGS)  $(LDLIBS)
 
 main.o: $(S_DIR)/main.c $(H_DIR)/main.h
 	$(CC)  -o main.o -c $(S_DIR)/main.c $(CFLAGS) $(CPPFLAGS) 
 curlHandler.o: $(S_DIR)/curlHandler.c $(H_DIR)/curlHandler.h
 	$(CC)  -o curlHandler.o -c $(S_DIR)/curlHandler.c $(CFLAGS) $(CPPFLAGS)
-fileHandler.o: $(S_DIR)/fileHandler.c $(H_DIR)/fileHandler.h
+fileHandler.o: $(S_DIR)/fileHandler.c $(H_DIR)/fileHandler.h $(H_DIR)/jsonHandler.h
 	$(CC)  -o fileHandler.o -c $(S_DIR)/fileHandler.c $(CFLAGS) $(CPPFLAGS)
 jsonHandler.o: $(S_DIR)/jsonHandler.c $(H_DIR)/jsonHandler.h
 	$(CC)  -o jsonHandler.o -c $(S_DIR)/jsonHandler.c $(CFLAGS) $(CPPFLAGS)
