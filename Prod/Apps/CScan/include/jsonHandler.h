@@ -28,6 +28,19 @@ typedef struct JsonElement{
 }JsonElement;
 
 
+/*
+ * ─── FONCTIONS DE LECTURE ───────────────────────────────────────────────────────
+ */
+
+JsonElement *readJsonFile(FILE *jsonFile);
+JsonElement *readJsonString(char *jsonString,unsigned long *cursor,unsigned long elementPosition, JsonElement *parentElement);
+
+char *readName(char *jsonString, unsigned long *cursor);
+short readData(char *jsonString, unsigned long *cursor,JsonType *dataType,Data *data);
+short readDoubleType(char *jsonString,unsigned long cursor,Data *data);
+short readLongType(char *jsonString,unsigned long cursor, Data *data);
+char *readStringType(char *jsonString, unsigned long cursor);
+short readBolType(char *jsonString,unsigned long cursor, Data *data);
 
 
 
@@ -40,18 +53,10 @@ Data defineJsonData(void *inputData, JsonType dataType);
 double *dblToPtr(double dblVar);
 long *lngToPtr(long lngVar);
 
+//Supprime les caractères pouvant comprommettre la lecture du chaine de caractère JSON 
 short formatJsonString(char **jsonString);
 
-JsonElement *readJsonFile(FILE *jsonFile);
-JsonElement *readJsonString(char *jsonString,unsigned long *cursor,unsigned long elementPosition, JsonElement *parentElement);
-char *readName(char *jsonString, unsigned long *cursor);
 
-short readData(char *jsonString, unsigned long *cursor,JsonType *dataType,Data *data);
-
-short readDoubleType(char *jsonString,unsigned long cursor,Data *data);
-short readLongType(char *jsonString,unsigned long cursor, Data *data);
-char *readStringType(char *jsonString, unsigned long cursor);
-short readBolType(char *jsonString,unsigned long cursor, Data *data);
 
 unsigned long countChildElements(char *jsonString,unsigned long cursor,JsonType dataType);
 

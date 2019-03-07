@@ -58,7 +58,7 @@ int main(int argc, char const *argv[]){
     // printf("element : %p\n",element->arrChildElement[2]->arrChildElement[0]);
     writeJsonElement(element,&jsonString,1000);
     printf("END");
-    printf("%s",jsonString);
+    // printf("%s",jsonString);
 
     free(jsonString);
     freeJsonElement(element);

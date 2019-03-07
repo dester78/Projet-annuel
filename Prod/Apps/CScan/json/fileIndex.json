@@ -1,2 +1,10 @@
-{"glossary":{"title":1234345,"GlossDiv":{"title":"S[","GlossList":{"GlossEntry":{"ID":"SGML","SortAs":"SGML","GlossTerm":"Standard Generalized Markup Language",
-"Acronym":"SGML","Abbrev":false,"GlossDef":{"para":"A meta-markup language used to create ,markup languages such as DocBook.","GlossSeeAlso":["GML","TFL",true]},"GlossSee":"markup"}}}}}
+{
+    "species": "Dog",
+    "breed": "Labrédor Retriever",
+    "age": 6,
+    "traits": {
+      "eyeColor": "brown",
+      "coatColor": "yellow",
+      "weight": "137lbs"
+    }
+  }

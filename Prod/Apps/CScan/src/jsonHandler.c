@@ -7,6 +7,7 @@
 #include <fileHandler.h>
 #include <jsonHandler.h>
 #include <errno.h>
+#include <wchar.h>
 
 
 double *dblToPtr(double dblVar){
@@ -35,11 +36,20 @@ JsonElement *initJsonElement(unsigned long sizeArrChildElement, unsigned long el
 
 short formatJsonString(char **jsonString){
 
-    for(unsigned long i=0;i<strlen(*jsonString);i++){
-        if((*jsonString[i]==' '||*jsonString[i]=='\n')&&controlCharInString(*jsonString,i)){
-            printf("ATTENTION : %s",jsonString[i]);
+    char *tmpString;
+    unsigned long i;
+    unsigned long j=0;
+    tmpString=malloc(sizeof(char*)*(strlen(*jsonString)+1));
+    for(i=0;i<strlen(*jsonString);i++){
+        if(((*jsonString)[i]!=' '&&(*jsonString)[i]!='\n')&&controlCharInString(*jsonString,i)==0){
+            tmpString[j]=(*jsonString)[i];
+            j++;
         }
     }
+    tmpString[j]='\0';
+    free(*jsonString);
+    *jsonString=tmpString;
+    return 0;
 
 }
 
@@ -78,8 +88,11 @@ short formatJsonString(char **jsonString){
 JsonElement *readJsonFile(FILE *jsonFile){
 
     char *jsonContent;
-    unsigned long cursor=1;
+    unsigned long cursor=0;
     jsonContent=getFileContent(jsonFile);
+    printf("JSON STRING START : %s",jsonContent);
+    formatJsonString(&jsonContent);
+
     return readJsonString(jsonContent,&cursor,0,NULL);
 }
 
@@ -198,7 +211,6 @@ unsigned long countChildElements(char *jsonString,unsigned long cursor,JsonType 
         }
         else if((jsonString[cursor]==searchedToken||jsonString[cursor]==nonSearchedToken)&&controlCharInString(jsonString,cursor)==0){
             tokenCounter++;
-
         }
         if(tokenCounter>=0){
             if(jsonString[cursor]==','&&controlCharInString(jsonString,cursor)==0){
@@ -216,7 +228,7 @@ short controlCharInString(char *jsonString,unsigned long cursor){
 
         if(jsonString[i]=='\"'&&jsonString[i-1]!='\\'){
             if(jsonString[i-1]==','||jsonString[i-1]==':'||jsonString[i-1]=='{'||jsonString[i-1]=='['){
-                for(unsigned long j = cursor ; j<strlen(jsonString); j++){
+                for(unsigned long j = i ; j<strlen(jsonString); j++){
                     if(jsonString[j]=='\"'&&jsonString[j-1]!='\\'){                      
                         if(jsonString[j+1]==','||jsonString[j+1]==':'||jsonString[j+1]=='}'||jsonString[j+1]==']'){
                             return 1;
@@ -280,7 +292,7 @@ short readLongType(char *jsonString,unsigned long cursor,Data *data){
             return 0;
         }
         if(jsonString[i]==':'){
-            strVar=malloc(sizeof(char)*(strSize-1));
+            strVar=malloc(sizeof(char)*(strSize));
             strncpy(strVar,jsonString+i+1,strSize);
             strVar[strSize]='\0';
             data->lngData=atol(strVar);
@@ -341,9 +353,6 @@ char *readStringType(char *jsonString, unsigned long cursor){
     return NULL;
 }
 
-
-
-
 short writeJsonElement(JsonElement *jsonElement, char **jsonString, unsigned long bufferSize){
 
     writeJsonName(jsonElement,jsonString,bufferSize);
@@ -365,11 +374,11 @@ short writeJsonData(JsonElement *jsonElement, char **jsonString,unsigned long bu
 
     switch(jsonElement->jsonType){
         case _LONG_:
-            sprintf(dataBuffer,"%d",jsonElement->data->lngData);
+            sprintf(dataBuffer,"%ld",jsonElement->data->lngData);
         break;
 
         case _DOUBLE_:
-            sprintf(dataBuffer,"%f",jsonElement->data->dblData);
+            sprintf(dataBuffer,"%lf",jsonElement->data->dblData);
         break;
 
         case _STRING_:      

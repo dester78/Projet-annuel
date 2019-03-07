@@ -22,7 +22,7 @@ File **initFileIndex(char *fileIndexPath){
         char *jsonString=malloc(sizeof(char));
         strcpy(jsonString,"\0");
         writeJsonElement(jsonElement,&jsonString,1000);
-        printf("jsonString : %s",jsonString);
+        printf("JSON STRING END : %s",jsonString);
 
         
     }   
