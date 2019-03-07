@@ -1,1 +1,2 @@
-{"fi:les":[{"name":"to:to","path":"log[s/errLog.txt","openMode":"a+"},{"name":"to:to","path":"log[s/errLog.txt","openMode":"a+"}]}
+{"glossary":{"title":1234345,"GlossDiv":{"title":"S[","GlossList":{"GlossEntry":{"ID":"SGML","SortAs":"SGML","GlossTerm":"Standard Generalized Markup Language",
+"Acronym":"SGML","Abbrev":false,"GlossDef":{"para":"A meta-markup language used to create ,markup languages such as DocBook.","GlossSeeAlso":["GML","TFL",true]},"GlossSee":"markup"}}}}}

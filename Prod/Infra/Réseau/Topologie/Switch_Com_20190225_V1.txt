@@ -22,7 +22,20 @@ Switch_X#(config-if) switchport access vlan X
 Switch_X#(config-if) exit
 
 
+Switch_X#(config) interface gigabitEthernet X/X
+Switch_X#(config-if) switchport mode access
+Switch_X#(config-if) switchport access vlan X
+Switch_X#(config-if) exit
 
+--
+-- ─── INIT SWITCH ─────────────────────────────────────────────────────────
+--
+interface gigabitEthernet 0/1
+switchport mode access
+switchport access vlan 2
+exit
 
-
-    
+interface gigabitEthernet 0/2
+switchport mode access
+switchport access vlan 3
+exit

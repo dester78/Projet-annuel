@@ -19,6 +19,12 @@ File **initFileIndex(char *fileIndexPath){
 
         jsonElement=readJsonFile(srcFile);
         
+        char *jsonString=malloc(sizeof(char));
+        strcpy(jsonString,"\0");
+        writeJsonElement(jsonElement,&jsonString,1000);
+        printf("jsonString : %s",jsonString);
+
+        
     }   
 
     return fileIndex;
