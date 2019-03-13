@@ -1,0 +1,34 @@
+{
+  "urlNeededValues" : [
+    {"protocol": [["","://"]]},
+    {"domain": [["","."]]},
+    {"socket": [[":",""]]},
+    {"path": [["/",""]]},
+    {"format": [[".",""]]},
+    {"query": [["?",""],["&",""],["=",""]]}
+  ],
+  "curl":[
+    {
+    "name":"getProduct",
+    "protocol":[["https"]],
+    "domain":[
+      ["ssl-api"],
+      ["openfoodfacts"],
+      ["org"]
+    ],
+    "path":[
+      ["api"],
+      ["v0"],
+      ["product"],
+      ["3392460511200"]
+    ],
+    "format": [["json"]],
+    "method": "GET",
+      "deepness": 2,
+      "directSearchedValues": [
+        "\"status\":1",
+        "\"status_verbose\",\":\"product found\""
+      ]
+    }
+  ]
+}

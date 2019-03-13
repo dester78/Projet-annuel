@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/curlHandler.h
+
+../include/fileHandler.h
+stdio.h
+-
+
+../include/jsonHandler.h
+fileHandler.h
+-
+
+C:/Users/sbailleu/CLionProjects/Cscan/src/main.c
+stdlib.h
+-
+stdio.h
+-
+string.h
+-
+curlHandler.h
+-
+locale.h
+-
+jsonHandler.h
+-
+
