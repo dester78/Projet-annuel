@@ -1,0 +1,198 @@
+
+Current configuration : 4311 bytes
+!
+version 15.6
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname Router_P1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no logging console
+!
+no aaa new-model
+ethernet lmi ce
+!
+!
+!
+no process cpu autoprofile hog
+mmi polling-interval 60
+no mmi auto-configure
+no mmi pvc
+mmi snmp-timeout 180
+!
+!
+!
+!
+!
+no ip icmp rate-limit unreachable
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip cef
+no ipv6 cef
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+redundancy
+!
+no cdp log mismatch duplex
+no cdp run
+!
+ip tcp synwait-time 5
+!
+!
+!
+!
+!
+crypto isakmp policy 1
+ encr aes 256
+ authentication pre-share
+ group 5
+ lifetime 85000
+crypto isakmp key 6 ffw address 0.0.0.0
+!
+!
+crypto ipsec transform-set ffwset esp-aes 256 esp-sha-hmac
+ mode tunnel
+!
+!
+crypto ipsec profile ffwprof
+ set security-association lifetime seconds 85000
+ set transform-set ffwset
+!
+!
+!
+!
+!
+!
+interface Tunnel0
+ ip address 10.2.4.2 255.255.255.128
+ no ip redirects
+ ip nhrp authentication ffw
+ ip nhrp map multicast 1.0.0.1
+ ip nhrp map 10.2.4.1 1.0.0.1
+ ip nhrp network-id 1
+ ip nhrp nhs 10.2.4.1
+ tunnel source GigabitEthernet0/0
+ tunnel mode gre multipoint
+ tunnel protection ipsec profile ffwprof
+!
+interface GigabitEthernet0/0
+ ip address 2.0.0.2 255.0.0.0
+ ip nat outside
+ ip virtual-reassembly in
+ duplex auto
+ speed auto
+ media-type rj45
+ no cdp enable
+!
+interface GigabitEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ media-type rj45
+ no cdp enable
+!
+interface GigabitEthernet0/1.2
+ encapsulation dot1Q 2
+ ip address 10.2.3.253 255.255.252.0
+ ip nat inside
+ ip virtual-reassembly in
+ no cdp enable
+!
+interface GigabitEthernet0/1.3
+ encapsulation dot1Q 3
+ ip address 10.1.255.253 255.254.0.0
+ no cdp enable
+!
+interface GigabitEthernet0/2
+ no ip address
+ shutdown
+ duplex auto
+ speed auto
+ media-type rj45
+ no cdp enable
+!
+interface GigabitEthernet0/3
+ no ip address
+ shutdown
+ duplex auto
+ speed auto
+ media-type rj45
+ no cdp enable
+!
+router rip
+ version 2
+ network 10.0.0.0
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+ip nat inside source list 1 interface GigabitEthernet0/0 overload
+ip route 0.0.0.0 0.0.0.0 2.0.0.3
+!
+!
+!
+access-list 1 permit 10.2.0.0 0.0.3.255
+!
+control-plane
+!
+banner exec ^C
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************^C
+banner incoming ^C
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************^C
+banner login ^C
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************^C
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line vty 0 4
+ login
+ transport input none
+!
+no scheduler allocate
+!
+end
+
