@@ -4,13 +4,22 @@
       "name": "curl",
       "path": "json/curl.json",
       "openMode": "r+",
-      "flux": null
+      "flux": null,
+      "openTime": "now"
     },
     {
       "name": "error",
       "path": "logs/error.txt",
       "openMode": "a+",
-      "flux": "stderr"
+      "flux": "stderr",
+      "openTime": "now"
+    },
+    {
+      "name": "test",
+      "path": "setup.exe",
+      "openMode": "w+",
+      "flux": null,
+      "openTime": "later"
     }
   ]
 }

@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <wchar.h>
+#include <wctype.h>
 #include <system.h>
 
 #include <jsonHandler.h>
@@ -27,6 +28,7 @@ short formatJsonString(wchar_t **jsonString){
     unsigned long i;
     unsigned long j=0;
     tmpString=malloc(sizeof(wchar_t*)*(wcslen(*jsonString)+1));
+    //Pour chaques caractères de la chaine json vérifie si c'est un retour à la ligne ou un espace et s(il est délimité par des guillemets s'il n'est pas délimité par des guillemets il est supprimé
     for(i=0;i<wcslen(*jsonString);i++){
         if((*jsonString)[i]!=L' '&&(*jsonString)[i]!=L'\n'&&controlCharInString((*jsonString),i)==0){
             tmpString[j]=(*jsonString)[i];
@@ -65,12 +67,14 @@ JsonElement *readJsonString(wchar_t *jsonString,unsigned long *cursor,unsigned l
 
     if(dataType==_OBJECT_||dataType==_ARRAY_){
         unsigned long endArray=0;
+        //Si un élément json est dans un niveau de recherche inférieur à celui symbolisé par deepness alors on parcours ses éléments. Sinon on passe à l'élément suivant.
         if(countDeepness(jsonElement,0)<deepness){
             jsonElement->sizeArrChildElement=countChildElements(jsonString,*cursor,dataType,&endArray);
             jsonElement->arrChildElement=malloc(sizeof(JsonElement*)*jsonElement->sizeArrChildElement);
             for(unsigned long i=0; i<jsonElement->sizeArrChildElement; i++){
                 jsonElement->arrChildElement[i]=readJsonString(jsonString,cursor,i,jsonElement,deepness);
             }
+            // Si le caractère ciblé par le curseur est un délimiteur d'ouverture on n'avance pas le curseur, avancer le curseur permet de passer à la lecture d'un nouvelle élément
             if(jsonString[*cursor]!='{'&&jsonString[*cursor]!='['&&controlCharInString(jsonString,*cursor)==0){
                 *cursor+=1;
             }
@@ -86,10 +90,12 @@ wchar_t *readName(wchar_t *jsonString, unsigned long *cursor){
 
     wchar_t *name;
     for(unsigned long i=*cursor; i<wcslen(jsonString);i++){
+        //On estime qu'un nom ne peut pas être suivi de caractère d'ouverture ou de fermeture d'ensemble json.
         if((jsonString[i]==L'['||jsonString[i]==L']'||jsonString[i]==L'{'||jsonString[i]==L'}')&&controlCharInString(jsonString,i)==0){
             *cursor=i;
             return NULL;
         }
+        //Cependant un symbole ':' permet de détecter un nom
         else if(jsonString[i]==':'&&controlCharInString(jsonString,i)==0){
             name=readStringType(jsonString,i);
             *cursor=i;
@@ -103,10 +109,7 @@ wchar_t *readName(wchar_t *jsonString, unsigned long *cursor){
 short readData(wchar_t *jsonString, unsigned long *cursor,JsonType *dataType,Data *data){
 
     for(unsigned long i=*cursor; i<wcslen(jsonString);i++){
-        if(controlCharInString(jsonString,i)){
-        }
-        else{
-        }
+        //Si un caractère d'ouverture d'ensemble json est présent et qu'il ne se trouve pas dans une chaine de caractère délimitée par des guillemets alors on type en _ARRAY_ ou _OBJECT_ en fonction du cractère
         if(jsonString[i]==L'['&&controlCharInString(jsonString,i)==0){
             *cursor=(i+1);
             *dataType=_ARRAY_;
@@ -119,14 +122,10 @@ short readData(wchar_t *jsonString, unsigned long *cursor,JsonType *dataType,Dat
             data->nulData=NULL;
             return 0;
         }
+        //On applique succesivement les fonctions suivantes pour extraire les différents types présent dans la chaine, la fonction de lecture est en première car la majorité des données lues actuellements sont de ce type.
         if((jsonString[i]==L','||jsonString[i]==L']'||jsonString[i]==L'}')&&controlCharInString(jsonString,i)==0){
             if((data->strData=readStringType(jsonString,i))!=0){
                 *dataType=_STRING_;
-                *cursor=i+1;
-                return 1;
-            }
-            if((readDoubleType(jsonString,i,data))!=0){
-                *dataType=_DOUBLE_;
                 *cursor=i+1;
                 return 1;
             }
@@ -135,8 +134,13 @@ short readData(wchar_t *jsonString, unsigned long *cursor,JsonType *dataType,Dat
                 *cursor=i+1;
                 return 1;
             }
+            if((readDoubleType(jsonString,i,data))!=0){
+                *dataType=_DOUBLE_;
+                *cursor=i+1;
+                return 1;
+            }
             if((readBolType(jsonString,i,data))!=0){
-                *dataType=_BOOLEAN_;
+                *dataType=__BOOLEAN__;
                 *cursor=i+1;
                 return 1;
             }
@@ -149,6 +153,7 @@ short readData(wchar_t *jsonString, unsigned long *cursor,JsonType *dataType,Dat
     }
     return 0;
 }
+
 
 unsigned long countChildElements(wchar_t *jsonString,unsigned long cursor,JsonType dataType,unsigned long *cursorEndArray){
 
@@ -166,6 +171,7 @@ unsigned long countChildElements(wchar_t *jsonString,unsigned long cursor,JsonTy
         nonSearchedToken=L']';
     }
     while(tokenCounter<1&&cursor<wcslen(jsonString)){
+        //A chaque caractère de fermeture rencontré, décrémente le compteur de délimiteur de 1 et inversement lors de caractère d'ouverture. L'objectif étant de ne pas compte le nombre d'éléments présent dans les sous ensembles de l'élément ciblé par la fonction
         if((jsonString[cursor]==searchedToken-2||jsonString[cursor]==nonSearchedToken-2)&&controlCharInString(jsonString,cursor)==0){
             tokenCounter--;
         }
@@ -173,6 +179,7 @@ unsigned long countChildElements(wchar_t *jsonString,unsigned long cursor,JsonTy
             tokenCounter++;
         }
         if(tokenCounter>=0){
+            //Le caractère ',' enous permet de savoir combien d'éléments sont présents dans un ensemble
             if(jsonString[cursor]==L','){
                 if(controlCharInString(jsonString,cursor)==0){
                     commaCounter++;
@@ -195,18 +202,24 @@ short controlCharInString(wchar_t *jsonString,unsigned long cursor){
 
     unsigned long quoteCounter=0;
     unsigned long i,j;
+
+    //Parcours la chaine de caractère en sens inverse jusqu'à une guillement non échappée
     for(i = cursor ; i>0; i--){
         if(jsonString[i]==L'\"'&&jsonString[i-1]!=L'\\'){
             quoteCounter++;
+            //Vérifie la présence d'un caractère délimiteur délément json derrière une guillement
             if(jsonString[i-1]==L','||jsonString[i-1]==L':'||jsonString[i-1]==L'{'||jsonString[i-1]==L'['||jsonString[i-1]==L'\n'||jsonString[i-1]==L' '){
+                //Parcours la chaine dans l'autre sens avec un décallage de 1 caractère et effectue le meme traitement dans le sens inverse en ne prenant pas en compte le caractère ciblé par le curseur d'origine
                 for(j = i+1 ; j<wcslen(jsonString); j++){
                     if(jsonString[j]==L'\"'&&jsonString[j-1]!=L'\\'){
                         quoteCounter++;
                         if(j!=cursor){
                             if((jsonString[j+1]==L','||jsonString[j+1]==L':'||jsonString[j+1]==L'}'||jsonString[j+1]==L']'||jsonString[i-1]==L'\n'||jsonString[i-1]==L' ')&&quoteCounter%2==0){
+                                //Est délimité par des guillemets
                                 return 1;
                             }
                             else{
+                                //N'est pas délimité par des guillemets
                                 return 0;
                             }
                         }
@@ -230,6 +243,7 @@ short readDoubleType(wchar_t *jsonString,unsigned long cursor,Data *data){
 
     for(unsigned long i=cursor-1;i!=0;i--){
         strSize++;
+
         if(iswdigit(jsonString[i])==0&&jsonString[i]!=L'.'&&jsonString[i]!=L':'){
             return 0;
         }

@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <wchar.h>
 
-
+typedef enum OpenTime{_NOW_,_LATER_}OpenTime;
 
 typedef struct File{
     char *name;
@@ -19,7 +19,7 @@ typedef struct FileIndex{
     unsigned int sizeArrayFile;
 }FileIndex;
 
-File *initFileElement(wchar_t *fileName, wchar_t *path, wchar_t *openMode,wchar_t *flux);
+File *initFileElement(wchar_t *fileName, wchar_t *path, wchar_t *openMode,wchar_t *flux,OpenTime openTime);
 FileIndex *initFileIndex(char *fileIndexPath);
 
 File *selectFile(FileIndex *fileIndex, char *searchedName);

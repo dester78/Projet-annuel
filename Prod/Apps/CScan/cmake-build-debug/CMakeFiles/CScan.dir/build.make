@@ -33,19 +33,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2018.3.4\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = C:\msys64\mingw64\bin\cmake.exe
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2018.3.4\bin\cmake\win\bin\cmake.exe" -E remove -f
+RM = C:\msys64\mingw64\bin\cmake.exe -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\sbailleu\CLionProjects\Cscan
+CMAKE_SOURCE_DIR = "C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\sbailleu\CLionProjects\Cscan\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/CScan.dir/depend.make
@@ -59,100 +59,100 @@ include CMakeFiles/CScan.dir/flags.make
 CMakeFiles/CScan.dir/src/curlHandler.c.obj: CMakeFiles/CScan.dir/flags.make
 CMakeFiles/CScan.dir/src/curlHandler.c.obj: CMakeFiles/CScan.dir/includes_C.rsp
 CMakeFiles/CScan.dir/src/curlHandler.c.obj: ../src/curlHandler.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\sbailleu\CLionProjects\Cscan\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/CScan.dir/src/curlHandler.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\CScan.dir\src\curlHandler.c.obj   -c C:\Users\sbailleu\CLionProjects\Cscan\src\curlHandler.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/CScan.dir/src/curlHandler.c.obj"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\CScan.dir\src\curlHandler.c.obj   -c "C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\src\curlHandler.c"
 
 CMakeFiles/CScan.dir/src/curlHandler.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CScan.dir/src/curlHandler.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\sbailleu\CLionProjects\Cscan\src\curlHandler.c > CMakeFiles\CScan.dir\src\curlHandler.c.i
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\src\curlHandler.c" > CMakeFiles\CScan.dir\src\curlHandler.c.i
 
 CMakeFiles/CScan.dir/src/curlHandler.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CScan.dir/src/curlHandler.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\sbailleu\CLionProjects\Cscan\src\curlHandler.c -o CMakeFiles\CScan.dir\src\curlHandler.c.s
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\src\curlHandler.c" -o CMakeFiles\CScan.dir\src\curlHandler.c.s
 
 CMakeFiles/CScan.dir/src/fileHandler.c.obj: CMakeFiles/CScan.dir/flags.make
 CMakeFiles/CScan.dir/src/fileHandler.c.obj: CMakeFiles/CScan.dir/includes_C.rsp
 CMakeFiles/CScan.dir/src/fileHandler.c.obj: ../src/fileHandler.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\sbailleu\CLionProjects\Cscan\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/CScan.dir/src/fileHandler.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\CScan.dir\src\fileHandler.c.obj   -c C:\Users\sbailleu\CLionProjects\Cscan\src\fileHandler.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/CScan.dir/src/fileHandler.c.obj"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\CScan.dir\src\fileHandler.c.obj   -c "C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\src\fileHandler.c"
 
 CMakeFiles/CScan.dir/src/fileHandler.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CScan.dir/src/fileHandler.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\sbailleu\CLionProjects\Cscan\src\fileHandler.c > CMakeFiles\CScan.dir\src\fileHandler.c.i
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\src\fileHandler.c" > CMakeFiles\CScan.dir\src\fileHandler.c.i
 
 CMakeFiles/CScan.dir/src/fileHandler.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CScan.dir/src/fileHandler.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\sbailleu\CLionProjects\Cscan\src\fileHandler.c -o CMakeFiles\CScan.dir\src\fileHandler.c.s
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\src\fileHandler.c" -o CMakeFiles\CScan.dir\src\fileHandler.c.s
 
 CMakeFiles/CScan.dir/src/jsonHandler.c.obj: CMakeFiles/CScan.dir/flags.make
 CMakeFiles/CScan.dir/src/jsonHandler.c.obj: CMakeFiles/CScan.dir/includes_C.rsp
 CMakeFiles/CScan.dir/src/jsonHandler.c.obj: ../src/jsonHandler.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\sbailleu\CLionProjects\Cscan\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/CScan.dir/src/jsonHandler.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\CScan.dir\src\jsonHandler.c.obj   -c C:\Users\sbailleu\CLionProjects\Cscan\src\jsonHandler.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/CScan.dir/src/jsonHandler.c.obj"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\CScan.dir\src\jsonHandler.c.obj   -c "C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\src\jsonHandler.c"
 
 CMakeFiles/CScan.dir/src/jsonHandler.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CScan.dir/src/jsonHandler.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\sbailleu\CLionProjects\Cscan\src\jsonHandler.c > CMakeFiles\CScan.dir\src\jsonHandler.c.i
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\src\jsonHandler.c" > CMakeFiles\CScan.dir\src\jsonHandler.c.i
 
 CMakeFiles/CScan.dir/src/jsonHandler.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CScan.dir/src/jsonHandler.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\sbailleu\CLionProjects\Cscan\src\jsonHandler.c -o CMakeFiles\CScan.dir\src\jsonHandler.c.s
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\src\jsonHandler.c" -o CMakeFiles\CScan.dir\src\jsonHandler.c.s
 
 CMakeFiles/CScan.dir/src/jsonReader.c.obj: CMakeFiles/CScan.dir/flags.make
 CMakeFiles/CScan.dir/src/jsonReader.c.obj: CMakeFiles/CScan.dir/includes_C.rsp
 CMakeFiles/CScan.dir/src/jsonReader.c.obj: ../src/jsonReader.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\sbailleu\CLionProjects\Cscan\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/CScan.dir/src/jsonReader.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\CScan.dir\src\jsonReader.c.obj   -c C:\Users\sbailleu\CLionProjects\Cscan\src\jsonReader.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/CScan.dir/src/jsonReader.c.obj"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\CScan.dir\src\jsonReader.c.obj   -c "C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\src\jsonReader.c"
 
 CMakeFiles/CScan.dir/src/jsonReader.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CScan.dir/src/jsonReader.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\sbailleu\CLionProjects\Cscan\src\jsonReader.c > CMakeFiles\CScan.dir\src\jsonReader.c.i
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\src\jsonReader.c" > CMakeFiles\CScan.dir\src\jsonReader.c.i
 
 CMakeFiles/CScan.dir/src/jsonReader.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CScan.dir/src/jsonReader.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\sbailleu\CLionProjects\Cscan\src\jsonReader.c -o CMakeFiles\CScan.dir\src\jsonReader.c.s
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\src\jsonReader.c" -o CMakeFiles\CScan.dir\src\jsonReader.c.s
 
 CMakeFiles/CScan.dir/src/jsonWriter.c.obj: CMakeFiles/CScan.dir/flags.make
 CMakeFiles/CScan.dir/src/jsonWriter.c.obj: CMakeFiles/CScan.dir/includes_C.rsp
 CMakeFiles/CScan.dir/src/jsonWriter.c.obj: ../src/jsonWriter.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\sbailleu\CLionProjects\Cscan\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/CScan.dir/src/jsonWriter.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\CScan.dir\src\jsonWriter.c.obj   -c C:\Users\sbailleu\CLionProjects\Cscan\src\jsonWriter.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/CScan.dir/src/jsonWriter.c.obj"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\CScan.dir\src\jsonWriter.c.obj   -c "C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\src\jsonWriter.c"
 
 CMakeFiles/CScan.dir/src/jsonWriter.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CScan.dir/src/jsonWriter.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\sbailleu\CLionProjects\Cscan\src\jsonWriter.c > CMakeFiles\CScan.dir\src\jsonWriter.c.i
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\src\jsonWriter.c" > CMakeFiles\CScan.dir\src\jsonWriter.c.i
 
 CMakeFiles/CScan.dir/src/jsonWriter.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CScan.dir/src/jsonWriter.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\sbailleu\CLionProjects\Cscan\src\jsonWriter.c -o CMakeFiles\CScan.dir\src\jsonWriter.c.s
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\src\jsonWriter.c" -o CMakeFiles\CScan.dir\src\jsonWriter.c.s
 
 CMakeFiles/CScan.dir/src/main.c.obj: CMakeFiles/CScan.dir/flags.make
 CMakeFiles/CScan.dir/src/main.c.obj: CMakeFiles/CScan.dir/includes_C.rsp
 CMakeFiles/CScan.dir/src/main.c.obj: ../src/main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\sbailleu\CLionProjects\Cscan\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/CScan.dir/src/main.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\CScan.dir\src\main.c.obj   -c C:\Users\sbailleu\CLionProjects\Cscan\src\main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/CScan.dir/src/main.c.obj"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\CScan.dir\src\main.c.obj   -c "C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\src\main.c"
 
 CMakeFiles/CScan.dir/src/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CScan.dir/src/main.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\sbailleu\CLionProjects\Cscan\src\main.c > CMakeFiles\CScan.dir\src\main.c.i
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\src\main.c" > CMakeFiles\CScan.dir\src\main.c.i
 
 CMakeFiles/CScan.dir/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CScan.dir/src/main.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\sbailleu\CLionProjects\Cscan\src\main.c -o CMakeFiles\CScan.dir\src\main.c.s
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\src\main.c" -o CMakeFiles\CScan.dir\src\main.c.s
 
 CMakeFiles/CScan.dir/src/wcharHandler.c.obj: CMakeFiles/CScan.dir/flags.make
 CMakeFiles/CScan.dir/src/wcharHandler.c.obj: CMakeFiles/CScan.dir/includes_C.rsp
 CMakeFiles/CScan.dir/src/wcharHandler.c.obj: ../src/wcharHandler.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\sbailleu\CLionProjects\Cscan\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/CScan.dir/src/wcharHandler.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\CScan.dir\src\wcharHandler.c.obj   -c C:\Users\sbailleu\CLionProjects\Cscan\src\wcharHandler.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/CScan.dir/src/wcharHandler.c.obj"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\CScan.dir\src\wcharHandler.c.obj   -c "C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\src\wcharHandler.c"
 
 CMakeFiles/CScan.dir/src/wcharHandler.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/CScan.dir/src/wcharHandler.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\sbailleu\CLionProjects\Cscan\src\wcharHandler.c > CMakeFiles\CScan.dir\src\wcharHandler.c.i
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\src\wcharHandler.c" > CMakeFiles\CScan.dir\src\wcharHandler.c.i
 
 CMakeFiles/CScan.dir/src/wcharHandler.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/CScan.dir/src/wcharHandler.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\sbailleu\CLionProjects\Cscan\src\wcharHandler.c -o CMakeFiles\CScan.dir\src\wcharHandler.c.s
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\src\wcharHandler.c" -o CMakeFiles\CScan.dir\src\wcharHandler.c.s
 
 # Object files for target CScan
 CScan_OBJECTS = \
@@ -178,7 +178,7 @@ bin/Debug/CScan.exe: CMakeFiles/CScan.dir/build.make
 bin/Debug/CScan.exe: CMakeFiles/CScan.dir/linklibs.rsp
 bin/Debug/CScan.exe: CMakeFiles/CScan.dir/objects1.rsp
 bin/Debug/CScan.exe: CMakeFiles/CScan.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\sbailleu\CLionProjects\Cscan\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable bin\Debug\CScan.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable bin\Debug\CScan.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\CScan.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -191,6 +191,6 @@ CMakeFiles/CScan.dir/clean:
 .PHONY : CMakeFiles/CScan.dir/clean
 
 CMakeFiles/CScan.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\sbailleu\CLionProjects\Cscan C:\Users\sbailleu\CLionProjects\Cscan C:\Users\sbailleu\CLionProjects\Cscan\cmake-build-debug C:\Users\sbailleu\CLionProjects\Cscan\cmake-build-debug C:\Users\sbailleu\CLionProjects\Cscan\cmake-build-debug\CMakeFiles\CScan.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan" "C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan" "C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\cmake-build-debug" "C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\cmake-build-debug" "C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\cmake-build-debug\CMakeFiles\CScan.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/CScan.dir/depend
 

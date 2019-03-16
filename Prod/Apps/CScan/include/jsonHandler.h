@@ -2,7 +2,7 @@
 #define JSON_HANDLER
 
 
-typedef enum JsonType{_LONG_,_DOUBLE_,_STRING_,_OBJECT_,_BOOLEAN_,_ARRAY_,_NULL_} JsonType;
+typedef enum JsonType{_LONG_,_DOUBLE_,_STRING_,_OBJECT_,__BOOLEAN__,_ARRAY_,_NULL_} JsonType;
 
 typedef union Data{
 

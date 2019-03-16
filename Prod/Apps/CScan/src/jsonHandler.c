@@ -43,7 +43,7 @@ JsonElement *searchJsonElement(JsonElement *jsonElement, wchar_t *searchedName,D
                     case _DOUBLE_:
                         bol = jsonElement->data->dblData == searchedValue->dblData ? (short) 1 : (short) 0;
                         break;
-                    case _BOOLEAN_:
+                    case __BOOLEAN__:
                         bol = jsonElement->data->bolData == searchedValue->bolData ? (short) 1 : (short) 0;
                         break;
                     case _LONG_:

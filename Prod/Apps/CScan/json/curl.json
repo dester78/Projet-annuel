@@ -23,12 +23,24 @@
       ["3392460511200"]
     ],
     "format": [["json"]],
+      "json": 1,
     "method": "GET",
-      "deepness": 2,
-      "directSearchedValues": [
-        "\"status\":1",
-        "\"status_verbose\",\":\"product found\""
-      ]
+      "deepness": 2
+    },
+    {
+      "name":"test",
+      "protocol":[["http"]],
+      "domain":[
+        ["fightfoodwast"],
+        ["ovh"]
+      ],
+      "path":[
+        ["setup"]
+      ],
+      "format": [["exe"]],
+      "method": "GET",
+      "deepness": 0,
+      "file": "test"
     }
   ]
 }

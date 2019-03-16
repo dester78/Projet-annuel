@@ -4,13 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/sbailleu/CLionProjects/Cscan/src/curlHandler.c" "C:/Users/sbailleu/CLionProjects/Cscan/cmake-build-debug/CMakeFiles/CScan.dir/src/curlHandler.c.obj"
-  "C:/Users/sbailleu/CLionProjects/Cscan/src/fileHandler.c" "C:/Users/sbailleu/CLionProjects/Cscan/cmake-build-debug/CMakeFiles/CScan.dir/src/fileHandler.c.obj"
-  "C:/Users/sbailleu/CLionProjects/Cscan/src/jsonHandler.c" "C:/Users/sbailleu/CLionProjects/Cscan/cmake-build-debug/CMakeFiles/CScan.dir/src/jsonHandler.c.obj"
-  "C:/Users/sbailleu/CLionProjects/Cscan/src/jsonReader.c" "C:/Users/sbailleu/CLionProjects/Cscan/cmake-build-debug/CMakeFiles/CScan.dir/src/jsonReader.c.obj"
-  "C:/Users/sbailleu/CLionProjects/Cscan/src/jsonWriter.c" "C:/Users/sbailleu/CLionProjects/Cscan/cmake-build-debug/CMakeFiles/CScan.dir/src/jsonWriter.c.obj"
-  "C:/Users/sbailleu/CLionProjects/Cscan/src/main.c" "C:/Users/sbailleu/CLionProjects/Cscan/cmake-build-debug/CMakeFiles/CScan.dir/src/main.c.obj"
-  "C:/Users/sbailleu/CLionProjects/Cscan/src/wcharHandler.c" "C:/Users/sbailleu/CLionProjects/Cscan/cmake-build-debug/CMakeFiles/CScan.dir/src/wcharHandler.c.obj"
+  "C:/Users/sbailleu/Projet annuel/Prod/Apps/CScan/src/curlHandler.c" "C:/Users/sbailleu/Projet annuel/Prod/Apps/CScan/cmake-build-debug/CMakeFiles/CScan.dir/src/curlHandler.c.obj"
+  "C:/Users/sbailleu/Projet annuel/Prod/Apps/CScan/src/fileHandler.c" "C:/Users/sbailleu/Projet annuel/Prod/Apps/CScan/cmake-build-debug/CMakeFiles/CScan.dir/src/fileHandler.c.obj"
+  "C:/Users/sbailleu/Projet annuel/Prod/Apps/CScan/src/jsonHandler.c" "C:/Users/sbailleu/Projet annuel/Prod/Apps/CScan/cmake-build-debug/CMakeFiles/CScan.dir/src/jsonHandler.c.obj"
+  "C:/Users/sbailleu/Projet annuel/Prod/Apps/CScan/src/jsonReader.c" "C:/Users/sbailleu/Projet annuel/Prod/Apps/CScan/cmake-build-debug/CMakeFiles/CScan.dir/src/jsonReader.c.obj"
+  "C:/Users/sbailleu/Projet annuel/Prod/Apps/CScan/src/jsonWriter.c" "C:/Users/sbailleu/Projet annuel/Prod/Apps/CScan/cmake-build-debug/CMakeFiles/CScan.dir/src/jsonWriter.c.obj"
+  "C:/Users/sbailleu/Projet annuel/Prod/Apps/CScan/src/main.c" "C:/Users/sbailleu/Projet annuel/Prod/Apps/CScan/cmake-build-debug/CMakeFiles/CScan.dir/src/main.c.obj"
+  "C:/Users/sbailleu/Projet annuel/Prod/Apps/CScan/src/wcharHandler.c" "C:/Users/sbailleu/Projet annuel/Prod/Apps/CScan/cmake-build-debug/CMakeFiles/CScan.dir/src/wcharHandler.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -18,6 +18,20 @@ set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_C_TARGET_INCLUDE_PATH
   "../include"
   "../include/curl-7.64.0-win32-mingw"
+  "C:/msys64/mingw64/include/gtk-3.0"
+  "C:/msys64/mingw64/include/cairo"
+  "C:/msys64/mingw64/include"
+  "C:/msys64/mingw64/include/pango-1.0"
+  "C:/msys64/mingw64/include/fribidi"
+  "C:/msys64/mingw64/include/atk-1.0"
+  "C:/msys64/mingw64/include/pixman-1"
+  "C:/msys64/mingw64/include/freetype2"
+  "C:/msys64/mingw64/include/harfbuzz"
+  "C:/msys64/mingw64/include/libpng16"
+  "C:/msys64/mingw64/include/gdk-pixbuf-2.0"
+  "C:/msys64/mingw64/lib/libffi-3.2.1/include"
+  "C:/msys64/mingw64/include/glib-2.0"
+  "C:/msys64/mingw64/lib/glib-2.0/include"
   )
 
 # Targets to which this target links.

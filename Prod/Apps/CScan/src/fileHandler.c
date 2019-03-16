@@ -34,12 +34,13 @@ FileIndex *initFileIndex(char *fileIndexPath){
         for(int i=0;i<(int)jsonElement->sizeArrChildElement;i++){
             for(int j=0;j<(int)jsonElement->arrChildElement[i]->sizeArrChildElement;j++){
 
+                OpenTime openTime=wcscmp(L"now",jsonElement->arrChildElement[i]->arrChildElement[j]->arrChildElement[4]->data->strData)==0?_NOW_:_LATER_;
+                printf("INITFILE\n");
                 fileIndex->arrayFile[j]=initFileElement(
                         jsonElement->arrChildElement[i]->arrChildElement[j]->arrChildElement[0]->data->strData,
                         jsonElement->arrChildElement[i]->arrChildElement[j]->arrChildElement[1]->data->strData,
                         jsonElement->arrChildElement[i]->arrChildElement[j]->arrChildElement[2]->data->strData,
-                        jsonElement->arrChildElement[i]->arrChildElement[j]->arrChildElement[3]->data->strData);
-
+                        jsonElement->arrChildElement[i]->arrChildElement[j]->arrChildElement[3]->data->strData,openTime);
             }
         }
     }
@@ -64,7 +65,7 @@ File *selectFile(FileIndex *fileIndex, char *searchedName){
 
 
 
- File *initFileElement(wchar_t *fileName, wchar_t *path, wchar_t *openMode,wchar_t *flux){
+ File *initFileElement(wchar_t *fileName, wchar_t *path, wchar_t *openMode,wchar_t *flux,OpenTime openTime){
 
     printf("BEGIN INIT");
      File *fileElement;
@@ -75,22 +76,24 @@ File *selectFile(FileIndex *fileIndex, char *searchedName){
      wCharToChar(&path,&fileElement->path,_CONSERV_,_CONSERV_);
      wCharToChar(&openMode,&fileElement->openMode,_CONSERV_,_CONSERV_);
 
+     if(openTime==_NOW_){
 
-     if(wcscmp(flux,L"null")!=0){
-         if(wcscmp(flux,L"stderr")==0) {
-             fileElement->filePointer=openFluxFile(fileElement->path,fileElement->openMode,stderr);
+         if(wcscmp(flux,L"null")!=0){
+             if(wcscmp(flux,L"stderr")==0) {
+                 fileElement->filePointer=openFluxFile(fileElement->path,fileElement->openMode,stderr);
+             }
+             else if(wcscmp(flux,L"stdin")==0) {
+                 fileElement->filePointer=openFluxFile(fileElement->path,fileElement->openMode,stdin);
+             }
+             else if(wcscmp(flux,L"stdout")==0) {
+                 fileElement->filePointer=openFluxFile(fileElement->path,fileElement->openMode,stdout);
+             }
          }
-         else if(wcscmp(flux,L"stdin")==0) {
-             fileElement->filePointer=openFluxFile(fileElement->path,fileElement->openMode,stdin);
-         }
-         else if(wcscmp(flux,L"stdout")==0) {
-             fileElement->filePointer=openFluxFile(fileElement->path,fileElement->openMode,stdout);
+         else{
+             fileElement->filePointer=openFile(fileElement->path,fileElement->openMode);
          }
      }
-     else{
-         fileElement->filePointer=openFile(fileElement->path,fileElement->openMode);
 
-     }
 
      printf("OK INIT\n");
      return fileElement;
@@ -154,7 +157,7 @@ FILE *openFluxFile(char *path, char *openMode,  FILE * flux){
 unsigned long countFileChar(FILE *filePtr){
     unsigned long fileSize;
     fseek(filePtr,0,SEEK_END);
-    fileSize=ftell(filePtr);
+    fileSize=(unsigned long)ftell(filePtr);
     fseek(filePtr,0,SEEK_SET);
 
     return fileSize;
