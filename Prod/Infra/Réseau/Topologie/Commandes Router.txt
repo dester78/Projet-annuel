@@ -1,4 +1,4 @@
-[nhrp authentification name] : ffw
+﻿[nhrp authentification name] : ffw
 [ipsec profile] : ffwprof
 [transform set] : ffwset
 
@@ -79,6 +79,16 @@ Router_X#(ipsec-profile) set security-association lifetime seconds 85000
 
 Router_X#(config) tunnel X
 Router_X#(config) tunnel protection ipsec profil [ipsec profile]
+
+--
+-- ─── NAT ───────────────────────────────────────────────────────────────
+--
+Router_X#(config) interface gigabitEthernet X/X
+Router_X#(config-if) ip nat inside
+Router_X#(config-if) exit
+
+Router_X#(config) access-list X permit X.X.X.X X.X.X.X X.X.X.X 
+Router_X#(config) ip nat inside source list X interface gigabitEthernet X/X overload 
 
 --
 -- ─── AJOUT D'UN AGENT RELAY DHCP ─────────────────────────────────────────────────
