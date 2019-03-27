@@ -1,0 +1,33 @@
+{
+  "files": [
+
+    {
+      "name": "curl",
+      "path": "json/curl.json",
+      "openMode": "r",
+      "flux": null,
+      "openTime": "now"
+    },
+    {
+      "name": "config",
+      "path": "config.json",
+      "openMode": "r",
+      "flux": null,
+      "openTime": "now"
+    },
+    {
+      "name": "gtk",
+      "path": "json/gtk.json",
+      "openMode": "r",
+      "flux": null,
+      "openTime": "now"
+    },
+    {
+      "name": "test",
+      "path": "setup.exe",
+      "openMode": "wb+",
+      "flux": null,
+      "openTime": "later"
+    }
+  ]
+}

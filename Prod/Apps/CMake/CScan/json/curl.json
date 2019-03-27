@@ -1,0 +1,48 @@
+{
+  "urlNeededValues" : [
+    {"protocol": [["","://"]]},
+    {"domain": [["","."]]},
+    {"socket": [[":",""]]},
+    {"path": [["/",""]]},
+    {"format": [[".",""]]},
+    {"query": [["?",""],["&",""],["=",""]]}
+  ],
+  "curl":[
+    {
+    "name":"getProduct",
+    "protocol":[["https"]],
+    "domain":[
+      ["ssl-api"],
+      ["openfoodfacts"],
+      ["org"]
+    ],
+    "path":[
+      ["api"],
+      ["v0"],
+      ["product"],
+      ["3392460511200"]
+    ],
+    "format": [["json"]],
+      "json": 1,
+    "method": "GET",
+      "deepness": 2
+    },
+    {
+      "name":"test",
+      "protocol":[["http"]],
+      "domain":[
+        ["freenetaccess"],
+        ["freeboxos"],
+        ["fr"]
+      ],
+      "socket":[["8080"]],
+      "path":[
+        ["setup"]
+      ],
+      "format": [["exe"]],
+      "method": "GET",
+      "deepness": 0,
+      "file": "test"
+    }
+  ]
+}

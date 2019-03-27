@@ -1,0 +1,12 @@
+@define-color bg_color #f9a039;
+
+
+#addButton {
+    background-image: none;/*Background image en none pour pouvoir modifier la couleur de fond du bouton*/
+    background-color: #42BD85;
+}
+
+#subButton {
+    background-image: none;/*Background image en none pour pouvoir modifier la couleur de fond du bouton*/
+    background-color: #FFB759;
+}

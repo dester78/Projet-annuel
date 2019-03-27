@@ -1,0 +1,7 @@
+{
+  "name": "error",
+  "path": "logs/error.txt",
+  "openMode": "a+",
+  "flux": "stderr",
+  "openTime": "now"
+},

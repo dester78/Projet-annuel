@@ -1,0 +1,31 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"jsonreader.h": "c",
+			"curl.h": "c",
+			"wchar.h": "c",
+			"typeinfo": "c",
+			"curlhandler.h": "c",
+			"jsonhandler.h": "c",
+			"filehandler.h": "c",
+			"typeinfo.h": "c",
+			"convertcharhandler.h": "c",
+			"jsonwriter.h": "c",
+			"gettext-po.h": "c",
+			"gi18n.h": "c",
+			"glib.h": "c",
+			"gtk.h": "c",
+			"bluetoothhandler.h": "c",
+			"gtkhandler.h": "c",
+			"bluetoothapis.h": "c",
+			"stdlib.h": "c",
+			"stdio.h": "c",
+			"locale.h": "c"
+		}
+	}
+}

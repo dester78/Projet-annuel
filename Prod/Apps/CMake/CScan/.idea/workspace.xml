@@ -1,0 +1,976 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="CScan" targetName="pot_file" />
+      <config projectName="CScan" targetName="CScan" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="15c5d40d-0040-4254-bdcf-9d30c6c42700" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/po/loginForm.glade" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/includes_C.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/includes_C.rsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/linklibs.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/linklibs.rsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/objects.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/objects1.rsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/src/curlHandler.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/src/curlHandler.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/src/fileHandler.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/src/fileHandler.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/src/jsonHandler.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/src/jsonHandler.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/src/jsonReader.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/src/jsonReader.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/src/jsonWriter.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/src/jsonWriter.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/src/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/src/main.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/src/wcharHandler.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CScan.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CScan.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CScan.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/bin/Debug/CScan.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/bin/Debug/CScan.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/curl-ca-bundle.crt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/glade/window_main.glade" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/include/curl-7.64.0-win32-mingw/curl.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/include/curl-7.64.0-win32-mingw/curlver.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/include/curl-7.64.0-win32-mingw/easy.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/include/curl-7.64.0-win32-mingw/mprintf.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/include/curl-7.64.0-win32-mingw/multi.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/include/curl-7.64.0-win32-mingw/stdcheaders.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/include/curl-7.64.0-win32-mingw/system.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/include/curl-7.64.0-win32-mingw/typecheck-gcc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/include/curl-7.64.0-win32-mingw/urlapi.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/include/curlHandler.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/include/fileHandler.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/include/jsonHandler.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/include/jsonReader.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/include/jsonWriter.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/include/main.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/json/curl.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/json/urlFile.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/BUILD-HOMEPAGE.url" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/BUILD-README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/CHANGES.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/COPYING-brotli.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/COPYING-libssh2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/COPYING-nghttp2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/COPYING-zlib.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/COPYING.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/LICENSE-openssl.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/RELEASE-NOTES.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/bin/curl-ca-bundle.crt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/bin/curl.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/bin/libcurl.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/docs/BINDINGS.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/docs/BUGS.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/docs/CHECKSRC.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/docs/CIPHERS.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/docs/CODE_OF_CONDUCT.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/docs/CODE_STYLE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/docs/CONTRIBUTE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/docs/DEPRECATE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/docs/FAQ.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/docs/FEATURES.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/docs/GOVERNANCE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/docs/HELP-US.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/docs/HISTORY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/docs/HTTP-COOKIES.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/docs/HTTP2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/docs/INSTALL.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/docs/INSTALL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/docs/INTERNALS.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/docs/KNOWN_BUGS.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/docs/LICENSE-MIXING.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/docs/MAIL-ETIQUETTE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/docs/MANUAL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/docs/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/docs/RELEASE-PROCEDURE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/docs/RESOURCES.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/docs/ROADMAP.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/docs/SECURITY-PROCESS.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/docs/SSL-PROBLEMS.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/docs/SSLCERTS.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/docs/THANKS.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/docs/TODO.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/docs/TheArtOfHttpScripting.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/docs/VERSIONS.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/docs/libcurl/ABI.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/docs/libcurl/symbols-in-versions.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/include/curl/curl.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/include/curl/curlver.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/include/curl/easy.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/include/curl/mprintf.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/include/curl/multi.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/include/curl/stdcheaders.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/include/curl/system.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/include/curl/typecheck-gcc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/include/curl/urlapi.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/curl-7.64.0-win32-mingw/mk-ca-bundle.pl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/libcurl.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/curl-7.64.0-win32-mingw/libcurl.dll.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libcurl.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/setup.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/curlHandler.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/fileHandler.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/jsonHandler.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/jsonReader.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/jsonWriter.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/trad/po/en.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/BUILD-HOMEPAGE.url" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/BUILD-HOMEPAGE.url" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/BUILD-README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/BUILD-README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/CHANGES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/CHANGES.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/COPYING-brotli.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/COPYING-brotli.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/COPYING-libssh2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/COPYING-libssh2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/COPYING-nghttp2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/COPYING-nghttp2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/COPYING-zlib.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/COPYING-zlib.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/COPYING.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/COPYING.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/LICENSE-openssl.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/LICENSE-openssl.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/RELEASE-NOTES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/RELEASE-NOTES.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/bin/curl-ca-bundle.crt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/bin/curl-ca-bundle.crt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/bin/curl.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/bin/curl.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/bin/libcurl.dll" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/bin/libcurl.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/docs/BINDINGS.md" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/docs/BINDINGS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/docs/BUGS.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/docs/BUGS.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/docs/CHECKSRC.md" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/docs/CHECKSRC.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/docs/CIPHERS.md" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/docs/CIPHERS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/docs/CODE_OF_CONDUCT.md" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/docs/CODE_OF_CONDUCT.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/docs/CODE_STYLE.md" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/docs/CODE_STYLE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/docs/CONTRIBUTE.md" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/docs/CONTRIBUTE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/docs/DEPRECATE.md" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/docs/DEPRECATE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/docs/FAQ.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/docs/FAQ.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/docs/FEATURES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/docs/FEATURES.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/docs/GOVERNANCE.md" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/docs/GOVERNANCE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/docs/HELP-US.md" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/docs/HELP-US.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/docs/HISTORY.md" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/docs/HISTORY.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/docs/HTTP-COOKIES.md" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/docs/HTTP-COOKIES.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/docs/HTTP2.md" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/docs/HTTP2.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/docs/INSTALL.md" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/docs/INSTALL.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/docs/INSTALL.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/docs/INSTALL.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/docs/INTERNALS.md" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/docs/INTERNALS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/docs/KNOWN_BUGS.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/docs/KNOWN_BUGS.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/docs/LICENSE-MIXING.md" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/docs/LICENSE-MIXING.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/docs/MAIL-ETIQUETTE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/docs/MAIL-ETIQUETTE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/docs/MANUAL.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/docs/MANUAL.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/docs/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/docs/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/docs/RELEASE-PROCEDURE.md" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/docs/RELEASE-PROCEDURE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/docs/RESOURCES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/docs/RESOURCES.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/docs/ROADMAP.md" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/docs/ROADMAP.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/docs/SECURITY-PROCESS.md" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/docs/SECURITY-PROCESS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/docs/SSL-PROBLEMS.md" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/docs/SSL-PROBLEMS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/docs/SSLCERTS.md" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/docs/SSLCERTS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/docs/THANKS.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/docs/THANKS.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/docs/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/docs/TODO.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/docs/TheArtOfHttpScripting.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/docs/TheArtOfHttpScripting.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/docs/VERSIONS.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/docs/VERSIONS.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/docs/libcurl/ABI.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/docs/libcurl/ABI.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/docs/libcurl/symbols-in-versions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/docs/libcurl/symbols-in-versions.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/include/curl/curl.h" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/include/curl/curl.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/include/curl/curlver.h" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/include/curl/curlver.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/include/curl/easy.h" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/include/curl/easy.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/include/curl/mprintf.h" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/include/curl/mprintf.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/include/curl/multi.h" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/include/curl/multi.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/include/curl/stdcheaders.h" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/include/curl/stdcheaders.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/include/curl/system.h" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/include/curl/system.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/include/curl/typecheck-gcc.h" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/include/curl/typecheck-gcc.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/include/curl/urlapi.h" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/include/curl/urlapi.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/lib/libcurl.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/lib/libcurl.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/lib/libcurl.dll.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/lib/libcurl.dll.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/curl-7.64.0-win32-mingw/mk-ca-bundle.pl" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/curl-7.64.0-win32-mingw/mk-ca-bundle.pl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/wCharHandler.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json/fileIndex.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/error.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/wcharHandler.c" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FavoritesManager">
+    <favorites_list name="CScan" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/curlHandler.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="9" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="9" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/po/en.mo">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/po/fr.po">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/POTFILES.in">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>works</find>
+      <find>Cscan</find>
+      <find>NAME</find>
+      <find>_poFileName</find>
+      <find>GETTEXT_MSGFMT_EXECUTABLE</find>
+      <find>GMO_BUILD_DIR</find>
+      <find>${CMAKE_CURRENT_SOURCE_DIR}</find>
+      <find>VERSION</find>
+      <find>TEMPLATE_FILE_ABS</find>
+      <find>GettextTranslate_XGETTEXT_EXECUTABLE</find>
+      <find>-L</find>
+      <find>macro</find>
+      <find>po</find>
+      <find>SUBDIR</find>
+      <find>LOCA</find>
+      <find>language</find>
+      <find>TEST</find>
+      <find>CMAKE_CURRENT_BINARY_DIR</find>
+      <find>LOCALE_INSTALL_DIR</find>
+      <find>GETTEXT</find>
+      <find>INITTOOL</find>
+      <find>Intl</find>
+      <find>xgettext</find>
+      <find>xgettex</find>
+      <find>inittool</find>
+      <find>CMAKE_CURRENT_SOURCE_DIR</find>
+      <find>TOTO</find>
+      <find>OUTPUT</find>
+      <find>OPTION</find>
+      <find>pot_file²</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>\\wprintf</replace>
+      <replace>//wprintf</replace>
+      <replace>__BOOLEAN__*</replace>
+      <replace>__BOOLEAN__</replace>
+      <replace>*curl</replace>
+      <replace>gFileName</replace>
+      <replace>e</replace>
+      <replace>Memory allocation error :</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
+        <option value="$PROJECT_DIR$/json/url.json" />
+        <option value="$PROJECT_DIR$/include/jsonWriter.h" />
+        <option value="$PROJECT_DIR$/include/jsonReader.h" />
+        <option value="$PROJECT_DIR$/include/wCharHandler.h" />
+        <option value="$PROJECT_DIR$/logs/error.txt" />
+        <option value="$PROJECT_DIR$/json/fileIndex" />
+        <option value="$PROJECT_DIR$/include/fileHandler.h" />
+        <option value="$PROJECT_DIR$/include/curlHandler.h" />
+        <option value="$PROJECT_DIR$/include/jsonHandler.h" />
+        <option value="$PROJECT_DIR$/setup.exe" />
+        <option value="$PROJECT_DIR$/json/curl.json" />
+        <option value="$PROJECT_DIR$/src/gtkHandler.h" />
+        <option value="$PROJECT_DIR$/src/wcharHandler.c" />
+        <option value="$PROJECT_DIR$/include/convertCharHandler.h" />
+        <option value="$PROJECT_DIR$/src/curlHandler.c" />
+        <option value="$PROJECT_DIR$/include/gtkCallbacks.h" />
+        <option value="$PROJECT_DIR$/src/gtkCallbacks.c" />
+        <option value="$PROJECT_DIR$/src/jsonWriter.c" />
+        <option value="$PROJECT_DIR$/include/bluetoothHandler.h" />
+        <option value="$PROJECT_DIR$/css/gtkStylesheet.css" />
+        <option value="$PROJECT_DIR$/glade/window_main.glade" />
+        <option value="$PROJECT_DIR$/glade/listElement.glade" />
+        <option value="$PROJECT_DIR$/css/gtkStyleSheet.css" />
+        <option value="$PROJECT_DIR$/include/gtkHandler.h" />
+        <option value="$PROJECT_DIR$/json/gtk.json" />
+        <option value="$PROJECT_DIR$/src/gtkHandler.c" />
+        <option value="$PROJECT_DIR$/src/bluetoothHandler.c" />
+        <option value="$PROJECT_DIR$/json/fileIndex.json" />
+        <option value="$PROJECT_DIR$/json/tmp.json" />
+        <option value="$PROJECT_DIR$/src/convertCharHandler.c" />
+        <option value="$PROJECT_DIR$/src/jsonReader.c" />
+        <option value="$PROJECT_DIR$/src/fileHandler.c" />
+        <option value="$PROJECT_DIR$/src/jsonHandler.c" />
+        <option value="$PROJECT_DIR$/po/LINGUAS" />
+        <option value="$PROJECT_DIR$/po/POTFILES.in" />
+        <option value="$PROJECT_DIR$/glade/mainWindow.glade" />
+        <option value="$PROJECT_DIR$/po/fr.mo" />
+        <option value="C:/msys64/home/sbailleu/test.po" />
+        <option value="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
+        <option value="$PROJECT_DIR$/po/fr.po" />
+        <option value="$PROJECT_DIR$/po/en.po" />
+        <option value="$PROJECT_DIR$/src/main.c" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+      </list>
+    </option>
+  </component>
+  <component name="OCFindUsagesOptions" text="false" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="30" />
+    <option name="y" value="-10" />
+    <option name="width" value="974" />
+    <option name="height" value="1100" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="CScan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CScan" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CScan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CScan" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CScan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CScan" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CScan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CScan" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
+              <item name="Debug" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CScan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CScan" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
+              <item name="Debug" type="462c0819:PsiDirectoryNode" />
+              <item name="glade" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CScan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CScan" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
+              <item name="CMakeFiles" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CScan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CScan" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
+              <item name="CMakeFiles" type="462c0819:PsiDirectoryNode" />
+              <item name="CScan.dir" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CScan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CScan" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
+              <item name="CMakeFiles" type="462c0819:PsiDirectoryNode" />
+              <item name="pot_file.dir" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CScan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CScan" type="462c0819:PsiDirectoryNode" />
+              <item name="glade" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CScan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CScan" type="462c0819:PsiDirectoryNode" />
+              <item name="gmo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CScan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CScan" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CScan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CScan" type="462c0819:PsiDirectoryNode" />
+              <item name="po" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CScan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CScan" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="C:/msys64/home/sbailleu/test.po" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\cmake-build-debug\CMakeFiles\update-po.dir" />
+      <recent name="C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\trad\po" />
+      <recent name="C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\cmake-build-debug\CMakeFiles\pot_file.dir" />
+      <recent name="C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\cmake-build-debug\CMakeFiles\translations.dir" />
+      <recent name="C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\json" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\po" />
+      <recent name="C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\gmo" />
+      <recent name="C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan" />
+      <recent name="C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\cmake-build-debug" />
+      <recent name="C:\Users\sbailleu\Projet annuel\Prod\Apps\CScan\trad" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.CScan">
+    <configuration name="CScan" type="CMakeRunConfiguration" factoryName="Application" editBeforeRun="true" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CScan" TARGET_NAME="CScan" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="CScan" RUN_TARGET_NAME="CScan">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unnamed" type="CMakeRunConfiguration" factoryName="Application" nameIsGenerated="true" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="CScan" RUN_TARGET_NAME="untitled" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="pot_file" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CScan" TARGET_NAME="pot_file" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Unnamed" />
+      <item itemvalue="Application.CScan" />
+      <item itemvalue="Application.pot_file" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="15c5d40d-0040-4254-bdcf-9d30c6c42700" name="Default Changelist" comment="" />
+      <created>1552068218697</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1552068218697</updated>
+      <workItem from="1552068222824" duration="9000" />
+      <workItem from="1552068266123" duration="2202000" />
+      <workItem from="1552126265606" duration="2561000" />
+      <workItem from="1552128868571" duration="54947000" />
+      <workItem from="1552299795906" duration="1998000" />
+      <workItem from="1552302263408" duration="4212000" />
+      <workItem from="1552308648130" duration="9838000" />
+      <workItem from="1552322687044" duration="38511000" />
+      <workItem from="1552394266983" duration="4047000" />
+      <workItem from="1552407664898" duration="25316000" />
+      <workItem from="1552484795503" duration="1924000" />
+      <workItem from="1552511045236" duration="8250000" />
+      <workItem from="1552567528346" duration="672000" />
+      <workItem from="1552585040552" duration="2387000" />
+      <workItem from="1552634183872" duration="8090000" />
+      <workItem from="1552653828217" duration="882000" />
+      <workItem from="1552655015244" duration="54000" />
+      <workItem from="1552655092301" duration="17000" />
+      <workItem from="1552659291496" duration="1716000" />
+      <workItem from="1552666955005" duration="57000" />
+      <workItem from="1552667061433" duration="16571000" />
+      <workItem from="1552699250318" duration="2668000" />
+      <workItem from="1552815545895" duration="37325000" />
+      <workItem from="1552898009235" duration="1411000" />
+      <workItem from="1552917545716" duration="283000" />
+      <workItem from="1552926469367" duration="17800000" />
+      <workItem from="1553015722108" duration="16118000" />
+      <workItem from="1553078284453" duration="1813000" />
+      <workItem from="1553093067193" duration="4562000" />
+      <workItem from="1553154454102" duration="973000" />
+      <workItem from="1553159227071" duration="2980000" />
+      <workItem from="1553192247969" duration="338000" />
+      <workItem from="1553193774018" duration="4331000" />
+      <workItem from="1553211065312" duration="11697000" />
+      <workItem from="1553260333272" duration="3332000" />
+      <workItem from="1553272205846" duration="26557000" />
+      <workItem from="1553443216549" duration="5853000" />
+      <workItem from="1553505137427" duration="3445000" />
+      <workItem from="1553515465297" duration="328000" />
+      <workItem from="1553515926280" duration="10425000" />
+      <workItem from="1553549258349" duration="2122000" />
+      <workItem from="1553551415129" duration="12408000" />
+      <workItem from="1553612183913" duration="3039000" />
+      <workItem from="1553618544479" duration="2088000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="356157000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Structure" order="0" sideWeight="0.13386881" side_tool="true" weight="0.12473348" />
+      <window_info id="Favorites" order="1" sideWeight="0.50080776" side_tool="true" weight="0.16471216" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.8661312" visible="true" weight="0.13326226" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.21451788" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3943662" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32885906" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32936078" />
+      <window_info anchor="bottom" id="CMake" order="11" visible="true" weight="0.32719395" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.2979415" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Structure" order="0" sideWeight="0.13386881" side_tool="true" visible="true" weight="0.12473348" />
+      <window_info id="Favorites" order="1" sideWeight="0.50080776" side_tool="true" weight="0.16471216" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.8661312" visible="true" weight="0.12473348" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.19068256" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3943662" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3298731" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32936078" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="CMake" order="11" weight="0.32936078" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.2990249" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/fileHandler.c</url>
+          <line>31</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/gtkHandler.c</url>
+          <line>116</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/bluetoothHandler.c</url>
+          <line>298</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/glade/listElement.glade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="38" column="51" lean-forward="true" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/gtkStyleSheet.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gtkCallbacks.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/gtkHandler.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+          <folding>
+            <element signature="e#39#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/bluetoothHandler.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gtkHandler.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="75" selection-start-line="75" selection-end-line="78" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/jsonHandler.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/json/fileIndex" />
+    <entry file="file://$PROJECT_DIR$/src/bluetoothHandler.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="534" column="2" lean-forward="true" selection-start-line="534" selection-start-column="2" selection-end-line="534" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/jsonReader.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/convertCharHandler.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" column="87" selection-start-line="45" selection-start-column="87" selection-end-line="45" selection-end-column="87" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/error.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="4129" lean-forward="true" selection-start-line="4129" selection-end-line="4129" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/json/gtk.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/fileHandler.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+          <folding>
+            <element signature="e#43#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jsonReader.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="392" column="40" selection-start-line="392" selection-start-column="40" selection-end-line="392" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/json/fileIndex.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeFiles/translations.dir/DependInfo.cmake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="27" lean-forward="true" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pot_file.dir/build.make" />
+    <entry file="file://$PROJECT_DIR$/json/tmp.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jsonHandler.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="72" selection-start-line="72" selection-end-line="72" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/glade/loginForm.glade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="46" column="11" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fileHandler.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+          <folding>
+            <element signature="e#30#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/po/LINGUAS">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/glade/mainWindow.glade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="140" column="68" selection-start-line="140" selection-start-column="58" selection-end-line="140" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CScan.dir/src/jsonReader.c.obj">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeFiles/pot_file.dir/fr.po" />
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeFiles/translations.dir/fr.po" />
+    <entry file="file://$PROJECT_DIR$/trad/po/toto.po" />
+    <entry file="file://$PROJECT_DIR$/po/toto.pot" />
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeFiles/translations.dir/build.make">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="611">
+          <caret line="69" column="23" selection-start-line="69" selection-start-column="23" selection-end-line="69" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/po/loginForm.glade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeFiles/update-gmo.dir/build.make" />
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="141" column="9" selection-start-line="141" selection-start-column="7" selection-end-line="141" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeFiles/update-po.dir/fr.po" />
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeFiles/update-po.dir/progress.make" />
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeFiles/update-po.dir/build.make" />
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/msys64/home/sbailleu/test.po">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/po/fr.mo" />
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/fr.gmo" />
+    <entry file="file://$PROJECT_DIR$/po/en.po">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmo/en.gmo">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trad/mo/fr.gmo" />
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/curlHandler.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="9" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/po/en.mo">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/po/fr.po">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/POTFILES.in">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

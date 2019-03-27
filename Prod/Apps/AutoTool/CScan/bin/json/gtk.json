@@ -1,0 +1,6 @@
+{
+  "mainWindow": "../glade/mainWindow.glade",
+  "listElement": "../glade/listElement.glade",
+  "loginForm": "../glade/loginForm.glade",
+  "styleSheet": "../css/gtkStyleSheet.css"
+}

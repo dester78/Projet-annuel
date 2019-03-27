@@ -1,0 +1,6 @@
+msgid "OK CURL"
+msgstr "TEST"
+msgid ""
+msgstr "CAMRACERZEGZEG"
+msgid "_Affichage"
+msgstr "CAMRACERZEGZEG"

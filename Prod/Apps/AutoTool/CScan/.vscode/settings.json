@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "jsonreader.h": "c",
+        "curl.h": "c",
+        "wchar.h": "c"
+    },
+    "C_Cpp.intelliSenseEngineFallback": "Enabled"
+}
