@@ -3,31 +3,24 @@
 
     {
       "name": "curl",
-      "path": "json/curl.json",
+      "path": "/usr/local/share/cscan/json/curl.json",
       "openMode": "r",
       "flux": null,
       "openTime": "now"
     },
     {
       "name": "config",
-      "path": "config.json",
+      "path": "/usr/local/share/cscan/json/config.json",
       "openMode": "r",
       "flux": null,
       "openTime": "now"
     },
     {
       "name": "gtk",
-      "path": "json/gtk.json",
+      "path": "/usr/local/share/cscan/json/gtk.json",
       "openMode": "r",
       "flux": null,
       "openTime": "now"
-    },
-    {
-      "name": "test",
-      "path": "setup.exe",
-      "openMode": "wb+",
-      "flux": null,
-      "openTime": "later"
     }
   ]
 }

@@ -19,7 +19,7 @@ typedef struct FileIndex{
     unsigned int sizeArrayFile;
 }FileIndex;
 
-File *initFileElement(wchar_t *fileName, wchar_t *path, wchar_t *openMode,wchar_t *flux,OpenTime openTime);
+File *initFileElement(char *fileName, char *path, char *openMode,char *flux,OpenTime openTime);
 FileIndex *initFileIndex(char *fileIndexPath);
 
 File *selectFile(FileIndex *fileIndex, char *searchedName);
@@ -45,9 +45,9 @@ FILE *openFluxFile(char *path, char *openMode, FILE * flux);
  * ─── FONCTIONS DE LECTURE DE FICHIERS ───────────────────────────────────────────
  */
 unsigned long countFileChar(FILE *filePtr);
-wchar_t *getFileContent(FILE *filePtr);
+char *getFileContent(FILE *filePtr);
 
-size_t wcfread(wchar_t *string,size_t size, FILE *file);
+size_t wcfread(char *string,size_t size, FILE *file);
 //Fonction remplissant un tableau de pointeur de tableau de chaine de caractère, la variable lastRow est modifié pour pouvoir parcourir ce tableau en dehors de la fonction
 short returnConfigFileParameters(FILE *configFile, int *lastRow,char ***arrayParameters );
 

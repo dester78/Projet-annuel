@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="952ee51f-9b87-4dba-853f-3073f8b7b7f5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.vscode/c_cpp_properties.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/c_cpp_properties.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CScan.code-workspace" beforeDir="false" afterPath="$PROJECT_DIR$/CScan.code-workspace" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile.am" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile.am" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile.in" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aclocal.m4" beforeDir="false" afterPath="$PROJECT_DIR$/aclocal.m4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autom4te.cache/output.0" beforeDir="false" afterPath="$PROJECT_DIR$/autom4te.cache/output.0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autom4te.cache/output.1" beforeDir="false" afterPath="$PROJECT_DIR$/autom4te.cache/output.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autom4te.cache/output.2" beforeDir="false" afterPath="$PROJECT_DIR$/autom4te.cache/output.2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autom4te.cache/output.3" beforeDir="false" afterPath="$PROJECT_DIR$/autom4te.cache/output.3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autom4te.cache/output.4" beforeDir="false" afterPath="$PROJECT_DIR$/autom4te.cache/output.4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autom4te.cache/output.5" beforeDir="false" afterPath="$PROJECT_DIR$/autom4te.cache/output.5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autom4te.cache/output.6" beforeDir="false" afterPath="$PROJECT_DIR$/autom4te.cache/output.6" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autom4te.cache/output.7" beforeDir="false" afterPath="$PROJECT_DIR$/autom4te.cache/output.7" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autom4te.cache/output.8" beforeDir="false" afterPath="$PROJECT_DIR$/autom4te.cache/output.8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autom4te.cache/output.9" beforeDir="false" afterPath="$PROJECT_DIR$/autom4te.cache/output.9" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autom4te.cache/requests" beforeDir="false" afterPath="$PROJECT_DIR$/autom4te.cache/requests" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autom4te.cache/traces.0" beforeDir="false" afterPath="$PROJECT_DIR$/autom4te.cache/traces.0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autom4te.cache/traces.1" beforeDir="false" afterPath="$PROJECT_DIR$/autom4te.cache/traces.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autom4te.cache/traces.2" beforeDir="false" afterPath="$PROJECT_DIR$/autom4te.cache/traces.2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autom4te.cache/traces.3" beforeDir="false" afterPath="$PROJECT_DIR$/autom4te.cache/traces.3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autom4te.cache/traces.4" beforeDir="false" afterPath="$PROJECT_DIR$/autom4te.cache/traces.4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autom4te.cache/traces.5" beforeDir="false" afterPath="$PROJECT_DIR$/autom4te.cache/traces.5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autom4te.cache/traces.6" beforeDir="false" afterPath="$PROJECT_DIR$/autom4te.cache/traces.6" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autom4te.cache/traces.7" beforeDir="false" afterPath="$PROJECT_DIR$/autom4te.cache/traces.7" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autom4te.cache/traces.8" beforeDir="false" afterPath="$PROJECT_DIR$/autom4te.cache/traces.8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autom4te.cache/traces.9" beforeDir="false" afterPath="$PROJECT_DIR$/autom4te.cache/traces.9" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/CScan.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Makefile.am" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Makefile.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/curl.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/json/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/json/Makefile.am" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/json/Makefile.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/json/config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/json/curl.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/json/fileIndex.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/json/gtk.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/libatk-1.0-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/libcurl-4.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/libffi-6.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/libgdk-3-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/libglib-2.0-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/libgobject-2.0-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/libgtk-3-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/libpcre-1.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-aux/compile" beforeDir="false" afterPath="$PROJECT_DIR$/build-aux/compile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-aux/config.guess" beforeDir="false" afterPath="$PROJECT_DIR$/build-aux/config.guess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-aux/config.sub" beforeDir="false" afterPath="$PROJECT_DIR$/build-aux/config.sub" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-aux/depcomp" beforeDir="false" afterPath="$PROJECT_DIR$/build-aux/depcomp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-aux/install-sh" beforeDir="false" afterPath="$PROJECT_DIR$/build-aux/install-sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-aux/ltmain.sh" beforeDir="false" afterPath="$PROJECT_DIR$/build-aux/ltmain.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-aux/missing" beforeDir="false" afterPath="$PROJECT_DIR$/build-aux/missing" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ca/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/ca/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ca/Makefile.in" beforeDir="false" afterPath="$PROJECT_DIR$/ca/Makefile.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.h" beforeDir="false" afterPath="$PROJECT_DIR$/config.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.h.in" beforeDir="false" afterPath="$PROJECT_DIR$/config.h.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.log" beforeDir="false" afterPath="$PROJECT_DIR$/config.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.status" beforeDir="false" afterPath="$PROJECT_DIR$/config.status" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configure" beforeDir="false" afterPath="$PROJECT_DIR$/configure" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configure.ac" beforeDir="false" afterPath="$PROJECT_DIR$/configure.ac" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/css/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/Makefile.in" beforeDir="false" afterPath="$PROJECT_DIR$/css/Makefile.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/glade/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/glade/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/glade/Makefile.in" beforeDir="false" afterPath="$PROJECT_DIR$/glade/Makefile.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/glade/listElement.glade" beforeDir="false" afterPath="$PROJECT_DIR$/glade/listElement.glade" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/glade/mainWindow.glade" beforeDir="false" afterPath="$PROJECT_DIR$/glade/mainWindow.glade" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/json/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/json/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/json/Makefile.in" beforeDir="false" afterPath="$PROJECT_DIR$/json/Makefile.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/json/fileIndex.json" beforeDir="false" afterPath="$PROJECT_DIR$/json/fileIndex.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/json/gtk.json" beforeDir="false" afterPath="$PROJECT_DIR$/json/gtk.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libtool" beforeDir="false" afterPath="$PROJECT_DIR$/libtool" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/logs/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/Makefile.in" beforeDir="false" afterPath="$PROJECT_DIR$/logs/Makefile.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/m4/libtool.m4" beforeDir="false" afterPath="$PROJECT_DIR$/m4/libtool.m4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/m4/ltoptions.m4" beforeDir="false" afterPath="$PROJECT_DIR$/m4/ltoptions.m4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/po/LINGUAS" beforeDir="false" afterPath="$PROJECT_DIR$/po/LINGUAS" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/po/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/po/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/po/Makefile.am" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/po/Makefile.in" beforeDir="false" afterPath="$PROJECT_DIR$/po/Makefile.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/po/POTFILES.in" beforeDir="false" afterPath="$PROJECT_DIR$/po/POTFILES.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/po/en.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/po/fr.po" beforeDir="false" afterPath="$PROJECT_DIR$/po/fr.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.deps/CScan-bluetoothHandler.Po" beforeDir="false" afterPath="$PROJECT_DIR$/src/.deps/CScan-bluetoothHandler.Po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.deps/CScan-convertCharHandler.Po" beforeDir="false" afterPath="$PROJECT_DIR$/src/.deps/CScan-convertCharHandler.Po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.deps/CScan-curlHandler.Po" beforeDir="false" afterPath="$PROJECT_DIR$/src/.deps/CScan-curlHandler.Po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.deps/CScan-fileHandler.Po" beforeDir="false" afterPath="$PROJECT_DIR$/src/.deps/CScan-fileHandler.Po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.deps/CScan-gtkCallbacks.Po" beforeDir="false" afterPath="$PROJECT_DIR$/src/.deps/CScan-gtkCallbacks.Po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.deps/CScan-gtkHandler.Po" beforeDir="false" afterPath="$PROJECT_DIR$/src/.deps/CScan-gtkHandler.Po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.deps/CScan-jsonHandler.Po" beforeDir="false" afterPath="$PROJECT_DIR$/src/.deps/CScan-jsonHandler.Po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.deps/CScan-jsonReader.Po" beforeDir="false" afterPath="$PROJECT_DIR$/src/.deps/CScan-jsonReader.Po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.deps/CScan-jsonWriter.Po" beforeDir="false" afterPath="$PROJECT_DIR$/src/.deps/CScan-jsonWriter.Po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.deps/CScan-main.Po" beforeDir="false" afterPath="$PROJECT_DIR$/src/.deps/CScan-main.Po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.libs/CScan.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.libs/CScan_ltshwrapper" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.libs/lt-CScan.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CScan-bluetoothHandler.o" beforeDir="false" afterPath="$PROJECT_DIR$/src/CScan-bluetoothHandler.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CScan-convertCharHandler.o" beforeDir="false" afterPath="$PROJECT_DIR$/src/CScan-convertCharHandler.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CScan-curlHandler.o" beforeDir="false" afterPath="$PROJECT_DIR$/src/CScan-curlHandler.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CScan-fileHandler.o" beforeDir="false" afterPath="$PROJECT_DIR$/src/CScan-fileHandler.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CScan-gtkCallbacks.o" beforeDir="false" afterPath="$PROJECT_DIR$/src/CScan-gtkCallbacks.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CScan-gtkHandler.o" beforeDir="false" afterPath="$PROJECT_DIR$/src/CScan-gtkHandler.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CScan-jsonHandler.o" beforeDir="false" afterPath="$PROJECT_DIR$/src/CScan-jsonHandler.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CScan-jsonReader.o" beforeDir="false" afterPath="$PROJECT_DIR$/src/CScan-jsonReader.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CScan-jsonWriter.o" beforeDir="false" afterPath="$PROJECT_DIR$/src/CScan-jsonWriter.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CScan-main.o" beforeDir="false" afterPath="$PROJECT_DIR$/src/CScan-main.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/src/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Makefile.am" beforeDir="false" afterPath="$PROJECT_DIR$/src/Makefile.am" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Makefile.in" beforeDir="false" afterPath="$PROJECT_DIR$/src/Makefile.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bluetoothHandler.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/bluetoothHandler.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bluetoothHandler.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/bluetoothHandler.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/convertCharHandler.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/convertCharHandler.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/convertCharHandler.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/convertCharHandler.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/curlHandler.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/curlHandler.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/curlHandler.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/curlHandler.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileHandler.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileHandler.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileHandler.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/fileHandler.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gtkHandler.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/gtkHandler.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jsonHandler.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/jsonHandler.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jsonHandler.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/jsonHandler.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jsonReader.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/jsonReader.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jsonReader.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/jsonReader.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jsonWriter.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/jsonWriter.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jsonWriter.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/jsonWriter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMake/CScan/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMake/CScan/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMake/CScan/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/3.13.4/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/3.13.4/CMakeCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/3.13.4/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/3.13.4/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/3.13.4/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/3.13.4/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/3.13.4/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/3.13.4/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/3.13.4/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/3.13.4/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/3.13.4/CMakeSystem.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/3.13.4/CompilerIdC/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/3.13.4/CompilerIdCXX/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CScan.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CScan.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CScan.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CScan.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CScan.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CScan.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CScan.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CScan.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CScan.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CScan.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CScan.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CScan.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CScan.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CScan.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CScan.dir/includes_C.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CScan.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CScan.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CScan.dir/linklibs.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CScan.dir/objects.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CScan.dir/objects1.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CScan.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CScan.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CScan.dir/src/bluetoothHandler.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CScan.dir/src/convertCharHandler.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CScan.dir/src/curlHandler.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CScan.dir/src/fileHandler.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CScan.dir/src/gtkCallbacks.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CScan.dir/src/gtkHandler.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CScan.dir/src/jsonHandler.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CScan.dir/src/jsonReader.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CScan.dir/src/jsonWriter.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/CScan.dir/src/main.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/pot_file.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/pot_file.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/pot_file.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/pot_file.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/translations.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/translations.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/translations.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CMakeFiles/translations.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CScan.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/CScan.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMake/CScan/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/include/bluetoothHandler.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMake/CScan/include/bluetoothHandler.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/src/CScan-bluetoothHandler.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/src/CScan-convertCharHandler.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/src/CScan-curlHandler.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/src/CScan-fileHandler.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/src/CScan-gtkCallbacks.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/src/CScan-gtkHandler.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/src/CScan-jsonHandler.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/src/CScan-jsonReader.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/src/CScan-jsonWriter.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/src/CScan-main.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMake/CScan/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMake/CScan/src/main.c" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="23" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="5" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="30" />
+    <option name="y" value="-10" />
+    <option name="width" value="974" />
+    <option name="height" value="1100" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="CScan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CScan" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CScan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CScan" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="952ee51f-9b87-4dba-853f-3073f8b7b7f5" name="Default Changelist" comment="" />
+      <created>1553944748499</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1553944748499</updated>
+      <workItem from="1553944749856" duration="11000" />
+      <workItem from="1553944776954" duration="66000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="77000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25235197" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32937366" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="23" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="5" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

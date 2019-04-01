@@ -1,8 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <locale.h>
-#include <glib-2.0/glib/gi18n.h>
-#include <gettext-po.h>
+
 
 #include <gtkHandler.h>
 #include <curlHandler.h>
@@ -11,9 +10,9 @@
 #include <jsonReader.h>
 #include <jsonWriter.h>
 #include <convertCharHandler.h>
-#include <winsock2.h>
-#include <ws2bth.h>
-#include <bluetoothapis.h>
+//#include <winsock2.h>
+//#include <ws2bth.h>
+//#include <bluetoothapis.h>
 
 #include <gtk/gtk.h>
 
@@ -42,14 +41,13 @@ int main(int argc, char**argv){
 
 
     setlocale (LC_ALL, "");
-    bindtextdomain ("CScan", getenv("PWD"));
-    textdomain ("CScan");
+
 
     fileIndex=initFileIndex("json/fileIndex.json");
     curlFile=selectFile(fileIndex,"curl");
     urlElement=readJsonFile(curlFile->filePointer,10);
     printf("\n");
-    printf(_("OK CURL"));
+    printf("OK CURL");
     printf("\n");
     gtkFile=selectFile(fileIndex,"gtk");
     gtkElement=readJsonFile(gtkFile->filePointer,10);

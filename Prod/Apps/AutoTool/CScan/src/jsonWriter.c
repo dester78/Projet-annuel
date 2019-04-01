@@ -9,50 +9,61 @@
 
 
 
-short writeJsonElement(JsonElement *jsonElement, wchar_t **jsonString, unsigned long bufferSize){
+short writeJsonElement(JsonElement *jsonElement, char **jsonString, unsigned long bufferSize){
 
+    
     writeJsonName(jsonElement,jsonString,bufferSize);
     writeJsonData(jsonElement,jsonString,bufferSize);
-
+    
+wprintf(L"VOOL\n");
+wprintf(L"%ls\n",jsonString);
+fflush(stdout);
     //Si un élément fait partie d'un ensemble d'élément et qu(il n'est pas le dernier de son ensemble alors on ajoute en fin de chaine json le caractère ','
     if(jsonElement->parentElement!=NULL){
+        wprintf(L"ARG\n");
+fflush(stdout);
+
         if(jsonElement->parentElement->sizeArrChildElement-1!=jsonElement->elementPosition){
-            *jsonString=realloc(*jsonString,sizeof(wchar_t)*(wcslen(*jsonString)+2));
-            wcscat(*jsonString,L",");
+            if((*jsonString=realloc(*jsonString,sizeof(char)*(strlen(*jsonString)+2)))==NULL){
+                wprintf(L"ARG\n");
+                fflush(stdout);
+                return 0;
+            }
+            strcat(*jsonString,",");
         }
     }
     return 1;
 }
 
-short writeJsonData(JsonElement *jsonElement, wchar_t **jsonString,unsigned long bufferSize){
+short writeJsonData(JsonElement *jsonElement, char **jsonString,unsigned long bufferSize){
 
-    wchar_t *dataBuffer;
-    dataBuffer=malloc(sizeof(wchar_t)*bufferSize);
+    char *dataBuffer;
+    dataBuffer=malloc(sizeof(char)*bufferSize);
 
     //Applique des conversions de types quelconques en chaine de caractere
     switch(jsonElement->jsonType){
         case _LONG_:
-            swprintf(dataBuffer,bufferSize,L"%ld",jsonElement->data->lngData);
+            sprintf(dataBuffer,"%ld",jsonElement->data->lngData);
             break;
         case _DOUBLE_:
-            swprintf(dataBuffer,bufferSize,L"%lf",jsonElement->data->dblData);
-            wcschr(dataBuffer,',')[0]='.';
+            sprintf(dataBuffer,"%lf",jsonElement->data->dblData);
+            strchr(dataBuffer,',')[0]='.';
             break;
 
         case _STRING_:
-            swprintf(dataBuffer,bufferSize,L"\"%ls\"",jsonElement->data->strData);
+            sprintf(dataBuffer,"\"%s\"",jsonElement->data->strData);
             break;
 
         case __BOOLEAN__:
             if(jsonElement->data->bolData==0){
-                swprintf(dataBuffer,bufferSize,L"%ls",L"false");
+                sprintf(dataBuffer,"%s","false");
             }
             else if(jsonElement->data->bolData){
-                swprintf(dataBuffer,bufferSize,L"%ls",L"true");
+                sprintf(dataBuffer,"%s","true");
             }
             break;
         case _NULL_:
-            swprintf(dataBuffer,bufferSize,L"%ls",jsonElement->data->strData);
+            sprintf(dataBuffer,"%s",jsonElement->data->strData);
             break;
         case _OBJECT_:
             writeAgreggatedValue(jsonElement,jsonString,bufferSize);
@@ -65,59 +76,59 @@ short writeJsonData(JsonElement *jsonElement, wchar_t **jsonString,unsigned long
     }
 
     //Concatene la chaine buffer avec la chaine de caractère json
-    *jsonString=realloc(*jsonString, (wcslen(*jsonString) + wcslen(dataBuffer)+1) * sizeof(wchar_t));
-    wcscat(*jsonString,dataBuffer);
+    *jsonString=realloc(*jsonString, (strlen(*jsonString) + strlen(dataBuffer)+1) * sizeof(char));
+    strcat(*jsonString,dataBuffer);
     free(dataBuffer);
 
     return 1;
 }
 
 
-short writeJsonName(JsonElement *jsonElement, wchar_t **jsonString, unsigned long bufferSize){
+short writeJsonName(JsonElement *jsonElement, char **jsonString, unsigned long bufferSize){
 
-    wchar_t *nameBuffer;
+    char *nameBuffer;
 
-    nameBuffer=malloc(sizeof(wchar_t)*bufferSize);
+    nameBuffer=malloc(sizeof(char)*bufferSize);
 
     if(jsonElement->name!=NULL){
 
         //Ajoute le caractère ':' qui caractèrise les noms dans le format json
-        swprintf(nameBuffer,bufferSize,L"\"%ls\":",jsonElement->name);
-        *jsonString=realloc(*jsonString, (wcslen(*jsonString) + wcslen(nameBuffer)+1) * sizeof(wchar_t));
-        wcscat(*jsonString,nameBuffer);
+        sprintf(nameBuffer,"\"%s\":",jsonElement->name);
+        *jsonString=realloc(*jsonString, (strlen(*jsonString) + strlen(nameBuffer)+1) * sizeof(char));
+        strcat(*jsonString,nameBuffer);
     }
 
     free(nameBuffer);
     return 1;
 }
 
-short writeAgreggatedValue(JsonElement *jsonElement, wchar_t **jsonString, unsigned long bufferSize){
-    wchar_t token[2];
+short writeAgreggatedValue(JsonElement *jsonElement, char **jsonString, unsigned long bufferSize){
+    char token[2];
 
     //Sélectionne un délimiteur particulier en fonction du type d'objet json envoyé à la fonction
     switch(jsonElement->jsonType){
         case _OBJECT_:
-            wcscpy(token,L"{");
+            strcpy(token,"{");
             break;
         case _ARRAY_:
-            wcscpy(token,L"[");
+            strcpy(token,"[");
             break;
 
         default:
             break;
     }
-    *jsonString=realloc(*jsonString, (wcslen(*jsonString) + wcslen(token)+2) * sizeof(wchar_t));
+    *jsonString=realloc(*jsonString, (strlen(*jsonString) + strlen(token)+2) * sizeof(char));
 
-    wcscat(*jsonString,token);
+    strcat(*jsonString,token);
     //Rappelle la fonction writeJsonElement pour chaque élements de l'ensemble
     for(unsigned long i=0;i<jsonElement->sizeArrChildElement;i++){
         writeJsonElement(jsonElement->arrChildElement[i],jsonString,bufferSize);
     }
 
     //Utilise le code ASCII du délimiteur d'ouverture +2 pour ajouter un délimiteur de fermeture
-    *jsonString=realloc(*jsonString, (wcslen(*jsonString) + wcslen(token)+2) * sizeof(wchar_t));
+    *jsonString=realloc(*jsonString, (strlen(*jsonString) + strlen(token)+2) * sizeof(char));
     token[0]+=2;
-    wcscat(*jsonString,token);
+    strcat(*jsonString,token);
 
     return 1;
 

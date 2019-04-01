@@ -16,29 +16,26 @@ GtkGUI *initGtkGUI(JsonElement *jsonGlade){
     gtkGUI->products=malloc(sizeof(GtkProduct*));
     gtkGUI->products=NULL;
     gtkGUI->sizeArrayProducts=0;
-    char *tmpChar;
 
-    if((jsonGlade=searchJsonElement(jsonGlade,L"mainWindow",NULL,_STRING_,&elementPosition))!=NULL) {
-        wCharToChar(&jsonGlade->arrChildElement[elementPosition]->data->strData,&tmpChar,_CONSERV_,_CONSERV_);
-        gtkGUI->builder=initGtkBuilder(tmpChar);
+    if((jsonGlade=searchJsonElement(jsonGlade,"mainWindow",NULL,_STRING_,&elementPosition))!=NULL) {
+        gtkGUI->builder=initGtkBuilder(jsonGlade->arrChildElement[elementPosition]->data->strData);
         gtkGUI->mainWindow=initGtkWindow(gtkGUI->builder,"mainWindow");
         gtkGUI->listContainer=GTK_WIDGET(gtk_builder_get_object(gtkGUI->builder,"productListContainer"));
     }
-    if((jsonGlade=searchJsonElement(jsonGlade,L"listElement",NULL,_STRING_,&elementPosition))!=NULL) {
-        wCharToChar(&jsonGlade->arrChildElement[elementPosition]->data->strData,&gtkGUI->productGladeFileName,_CONSERV_,_CONSERV_);
+    if((jsonGlade=searchJsonElement(jsonGlade,"listElement",NULL,_STRING_,&elementPosition))!=NULL) {
+        gtkGUI->productGladeFileName=malloc(sizeof(char)*(strlen(jsonGlade->arrChildElement[elementPosition]->data->strData)+1));
+        strcpy(gtkGUI->productGladeFileName,jsonGlade->arrChildElement[elementPosition]->data->strData);
         gtkGUI->builder=initGtkBuilder(gtkGUI->productGladeFileName);
 
     }
-    if((jsonGlade=searchJsonElement(jsonGlade,L"loginForm",NULL,_STRING_,&elementPosition))!=NULL) {
-        wCharToChar(&jsonGlade->arrChildElement[elementPosition]->data->strData,&tmpChar,_CONSERV_,_FREE_);
-        gtkGUI->builder=initGtkBuilder(tmpChar);
+    if((jsonGlade=searchJsonElement(jsonGlade,"loginForm",NULL,_STRING_,&elementPosition))!=NULL) {
+        gtkGUI->builder=initGtkBuilder(jsonGlade->arrChildElement[elementPosition]->data->strData);
         gtkGUI->loginForm=GTK_WIDGET(gtk_builder_get_object(gtkGUI->builder,"loginWindow"));
     }
 
-    if((jsonGlade=searchJsonElement(jsonGlade,L"styleSheet",NULL,_STRING_,&elementPosition))!=NULL) {
-        wCharToChar(&jsonGlade->arrChildElement[elementPosition]->data->strData,&tmpChar,_CONSERV_,_FREE_);
+    if((jsonGlade=searchJsonElement(jsonGlade,"styleSheet",NULL,_STRING_,&elementPosition))!=NULL) {
         GtkCssProvider *cssProvider = gtk_css_provider_new();
-        gtk_css_provider_load_from_path(GTK_CSS_PROVIDER(cssProvider), tmpChar, NULL);
+        gtk_css_provider_load_from_path(GTK_CSS_PROVIDER(cssProvider), jsonGlade->arrChildElement[elementPosition]->data->strData, NULL);
         gtk_style_context_add_provider_for_screen(gdk_screen_get_default(),GTK_STYLE_PROVIDER(cssProvider),GTK_STYLE_PROVIDER_PRIORITY_USER);
     }
 

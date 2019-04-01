@@ -1,12 +1,14 @@
 #ifndef JSON_HANDLER
 #define JSON_HANDLER
 
+#include <wchar.h>
+#include <wctype.h>
 
 typedef enum JsonType{_LONG_,_DOUBLE_,_STRING_,_OBJECT_,__BOOLEAN__,_ARRAY_,_NULL_} JsonType;
 
 typedef union Data{
 
-    wchar_t *strData;
+    char *strData;
     short bolData;
     long lngData;
     double dblData;
@@ -19,7 +21,7 @@ typedef struct JsonElement{
 
     unsigned long sizeArrChildElement;
     unsigned long elementPosition;
-    wchar_t *name;
+    char *name;
     Data *data;
     JsonType jsonType;
     struct JsonElement **arrChildElement;
@@ -32,14 +34,14 @@ typedef struct JsonElement{
  * ─── FONCTIONS DE LECTURE ───────────────────────────────────────────────────────
  */
 
-JsonElement *searchJsonElement(JsonElement *jsonElement, wchar_t *searchedName,Data *searchedValue, JsonType searchedType, unsigned int *elementPosition);
+JsonElement *searchJsonElement(JsonElement *jsonElement, char *searchedName,Data *searchedValue, JsonType searchedType, unsigned int *elementPosition);
 
 
 int countDeepness(JsonElement *parentElement,int deepness);
 
 
 //Initialise un élément JSON avec les valeurs passées en paramètre
-JsonElement *initJsonElement(unsigned long sizeArrChildElement, unsigned long elementPosition, wchar_t *name, Data  *data, JsonType dataType, JsonElement *parentElement);
+JsonElement *initJsonElement(unsigned long sizeArrChildElement, unsigned long elementPosition, char *name, Data  *data, JsonType dataType, JsonElement *parentElement);
 
 
 //Libère en mémoire un élément JSON

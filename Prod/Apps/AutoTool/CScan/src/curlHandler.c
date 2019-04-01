@@ -1,6 +1,8 @@
 #include <stdio.h>
+#include<string.h>
 #include <curl/curl.h>
 #include <wchar.h>
+#include <stdlib.h>
 #include <locale.h>
 
 #include <curlHandler.h>
@@ -82,7 +84,7 @@ short freeCurlResponse(CurlResponse **curlResponse){
 
 
 
-CurlRequest *jsonToCurl(JsonElement *jsonElement,wchar_t *urlName,FileIndex *fileIndex){
+CurlRequest *jsonToCurl(JsonElement *jsonElement,char *urlName,FileIndex *fileIndex){
 
     CurlRequest *curl;
     Data data;
@@ -91,89 +93,83 @@ CurlRequest *jsonToCurl(JsonElement *jsonElement,wchar_t *urlName,FileIndex *fil
     JsonElement *tmpJsonElement;
     unsigned int elementPosition;
     unsigned int parameterPosition;
-    wchar_t *tmpWchar;
-    char *tmpChar;
 
     curl=initCurlRequest();
 
-    printf("WAIT");
+    // printf("WAIT");
     data.strData=urlName;
 
-    if((jsonCurlElement=searchJsonElement(jsonElement,L"curl",NULL,_ARRAY_,&elementPosition))!=NULL){
-        if((jsonCurlElement=searchJsonElement(jsonCurlElement,L"name",&data,_STRING_,&elementPosition))!=NULL){
+    if((jsonCurlElement=searchJsonElement(jsonElement,"curl",NULL,_ARRAY_,&elementPosition))!=NULL){
+        if((jsonCurlElement=searchJsonElement(jsonCurlElement,"name",&data,_STRING_,&elementPosition))!=NULL){
 
-            if((jsonParameterElement=searchJsonElement(jsonElement,L"urlNeededValues",NULL,_ARRAY_,&parameterPosition))){
+            if((jsonParameterElement=searchJsonElement(jsonElement,"urlNeededValues",NULL,_ARRAY_,&parameterPosition))){
                 curl->url=writeUrl(jsonCurlElement,jsonParameterElement->arrChildElement[parameterPosition]);
-                printf("URL : %s\n",curl->url);
             }
-            if((tmpJsonElement=searchJsonElement(jsonElement,L"file",NULL,_STRING_,&parameterPosition))!=NULL){
-                wCharToChar(&tmpJsonElement->arrChildElement[elementPosition]->data->strData,&tmpChar,_CONSERV_,_CONSERV_);
-                curl->response->file=selectFile(fileIndex,tmpChar);
+            if((tmpJsonElement=searchJsonElement(jsonElement,"file",NULL,_STRING_,&parameterPosition))!=NULL){
+                curl->response->file=selectFile(fileIndex,tmpJsonElement->arrChildElement[elementPosition]->data->strData);
                 curl->responseType=_FILE_;
             }
-            if((tmpJsonElement=searchJsonElement(jsonCurlElement,L"method",NULL,_STRING_,&elementPosition))!=NULL){
-                wCharToChar(&tmpJsonElement->arrChildElement[elementPosition]->data->strData,&curl->method,_CONSERV_,_CONSERV_);
+            if((tmpJsonElement=searchJsonElement(jsonCurlElement,"method",NULL,_STRING_,&elementPosition))!=NULL){
+                curl->method=malloc(sizeof(char)*(strlen(tmpJsonElement->arrChildElement[elementPosition]->data->strData)+1));
+                strcpy(curl->method,tmpJsonElement->arrChildElement[elementPosition]->data->strData);
             }
-            if((tmpJsonElement=searchJsonElement(jsonCurlElement,L"deepness",NULL,_LONG_,&elementPosition))!=NULL){
+            if((tmpJsonElement=searchJsonElement(jsonCurlElement,"deepness",NULL,_LONG_,&elementPosition))!=NULL){
                 curl->deepness=(int)tmpJsonElement->arrChildElement[elementPosition]->data->lngData;
             }
-            if((tmpJsonElement=searchJsonElement(jsonCurlElement,L"json",NULL,_LONG_,&elementPosition))!=NULL){
+            if((tmpJsonElement=searchJsonElement(jsonCurlElement,"json",NULL,_LONG_,&elementPosition))!=NULL){
                 curl->responseType=_JSON_;
             }
-            if((tmpJsonElement=searchJsonElement(jsonCurlElement,L"directSearchedValues",NULL,_ARRAY_,&elementPosition))!=NULL&&tmpJsonElement->arrChildElement[elementPosition]->sizeArrChildElement!=0){
+            if((tmpJsonElement=searchJsonElement(jsonCurlElement,"directSearchedValues",NULL,_ARRAY_,&elementPosition))!=NULL&&tmpJsonElement->arrChildElement[elementPosition]->sizeArrChildElement!=0){
                 curl->sizeArrSearchedValues=(int)tmpJsonElement->arrChildElement[elementPosition]->sizeArrChildElement;
                 curl->directSearchedValues=malloc(sizeof(char*)*curl->sizeArrSearchedValues);
                 for(int i=0;i<curl->sizeArrSearchedValues;i++){
-                    wCharToChar(&tmpJsonElement->arrChildElement[elementPosition]->arrChildElement[i]->data->strData,&curl->directSearchedValues[i],_CONSERV_,_CONSERV_);
+                    curl->directSearchedValues[i]=malloc(sizeof(char)*(strlen(tmpJsonElement->arrChildElement[elementPosition]->arrChildElement[i]->data->strData)+1));
+                    strcpy(curl->directSearchedValues[i],tmpJsonElement->arrChildElement[elementPosition]->arrChildElement[i]->data->strData);
                 }
             }
-            if((tmpJsonElement=searchJsonElement(jsonCurlElement,L"body",NULL,_OBJECT_,&elementPosition))!=NULL){
-                tmpWchar=malloc(sizeof(wchar_t));
-                tmpWchar[0]='\0';
-                writeAgreggatedValue(tmpJsonElement->arrChildElement[elementPosition],&tmpWchar,1000);
-                wCharToChar(&tmpWchar,&curl->body,_FREE_,_CONSERV_);
+            if((tmpJsonElement=searchJsonElement(jsonCurlElement,"body",NULL,_OBJECT_,&elementPosition))!=NULL){
+                curl->body=malloc(sizeof(char));
+                curl->body[0]='\0';
+                writeAgreggatedValue(tmpJsonElement->arrChildElement[elementPosition],&curl->body,1000);
             }
         }
     }
 
+    printf("URL : %s",curl->url);
     return curl;
 }
 
 char *writeUrl(JsonElement *jsonElement,  JsonElement *urlNeededValues){
 
-    wchar_t *wUrl;
-    char *cUrl;
+    char *url;
     JsonElement *tmpElement;
     unsigned int elementPosition;
-
-    wUrl=malloc(sizeof(wchar_t));
-
+    
+    url=malloc(sizeof(char));
+    url[0]='\0';
 
     for(unsigned long i=0;i<urlNeededValues->sizeArrChildElement;i++){
         if((tmpElement=searchJsonElement(jsonElement,urlNeededValues->arrChildElement[i]->arrChildElement[0]->name,NULL,_ARRAY_,&elementPosition))!=NULL){
-            catTokenWithUrl(urlNeededValues->arrChildElement[i]->arrChildElement[0],tmpElement->arrChildElement[elementPosition],&wUrl);
+            catTokenWithUrl(urlNeededValues->arrChildElement[i]->arrChildElement[0],tmpElement->arrChildElement[elementPosition],&url);
         }
     }
-//    wUrl[wcslen(wUrl)]=L'\0';
-    wCharToChar(&wUrl,&cUrl,_FREE_,_CONSERV_);
-    printf(" C URL : %s|\n",cUrl);
-    return cUrl;
+    return url;
 }
 
-short catTokenWithUrl(JsonElement *urlToken, JsonElement *urlElement,wchar_t **url){
+short catTokenWithUrl(JsonElement *urlToken, JsonElement *urlElement,char **url){
 
     for(unsigned long i=0;i<urlElement->sizeArrChildElement;i++){
         if(urlElement->arrChildElement[i]->arrChildElement==NULL){
-            if(wcslen(urlElement->arrChildElement[i]->data->strData)>0){
-                if(wcslen(urlToken->parentElement->arrChildElement[i]->arrChildElement[0]->data->strData)>0){
-                    *url=realloc(*url,sizeof(wchar_t)*(wcslen(*url)+wcslen(urlToken->parentElement->arrChildElement[i]->arrChildElement[0]->data->strData)+1));
-                    wcscat(*url,urlToken->parentElement->arrChildElement[i]->arrChildElement[0]->data->strData);
+            if(strlen(urlElement->arrChildElement[i]->data->strData)>0){
+                if(strlen(urlToken->parentElement->arrChildElement[i]->arrChildElement[0]->data->strData)>0){
+                    *url=realloc(*url,sizeof(char)*(strlen(*url)+strlen(urlToken->parentElement->arrChildElement[i]->arrChildElement[0]->data->strData)+1));
+                    strcat(*url,urlToken->parentElement->arrChildElement[i]->arrChildElement[0]->data->strData);
                 }
-                *url=realloc(*url,sizeof(wchar_t)*(wcslen(*url)+wcslen(urlElement->arrChildElement[i]->data->strData)+1));
-                wcscat(*url,urlElement->arrChildElement[i]->data->strData);
-                if(wcslen(urlToken->parentElement->arrChildElement[i]->arrChildElement[1]->data->strData)>0){
-                    *url=realloc(*url,sizeof(wchar_t)*(wcslen(*url)+wcslen(urlToken->parentElement->arrChildElement[i]->arrChildElement[1]->data->strData)+1));
-                    wcscat(*url,urlToken->parentElement->arrChildElement[i]->arrChildElement[1]->data->strData);
+                *url=realloc(*url,sizeof(char)*(strlen(*url)+strlen(urlElement->arrChildElement[i]->data->strData)+1));
+                strcat(*url,urlElement->arrChildElement[i]->data->strData);
+                if(strlen(urlToken->parentElement->arrChildElement[i]->arrChildElement[1]->data->strData)>0){
+                    *url=realloc(*url,sizeof(char)*(strlen(*url)+strlen(urlToken->parentElement->arrChildElement[i]->arrChildElement[1]->data->strData)+1));
+                    strcat(*url,urlToken->parentElement->arrChildElement[i]->arrChildElement[1]->data->strData);
                 }
             }
         }
@@ -219,7 +215,7 @@ short curlConnect(CurlRequest **curlRequest){
     }
 
 
-//    wprintf(L"CHAR END : %ls",tmpWChar);
+//    wprintf("CHAR END : %ls",tmpWChar);
 
     return 0;
 }
@@ -246,29 +242,28 @@ size_t curlToFile(void *ptr, size_t size, size_t nmemb, FILE *curlResponse) {
 
 short curlGetJson(CurlRequest **curlRequest){
 
-    wchar_t *tmpWChar;
+    char *tmpChar;
     unsigned long cursor=0;
 
 
     if((*curlRequest)->directSearchedValues!=NULL){
         for(int i = 0; i < (*curlRequest)->sizeArrSearchedValues ; i++){
             if(strpbrk((*curlRequest)->response->string,(*curlRequest)->directSearchedValues[i])!=NULL){
-                printf("OK CURL FIND");
+                // printf("OK CURL FIND");
                 return 1;
             }
         }
     }
 
 
-    charToWchar(&(*curlRequest)->response->string,&tmpWChar,_FREE_,_CONSERV_);
-    wprintf(L"RESULT !!! :%ls",tmpWChar);
-    (*curlRequest)->response->json=readJsonString(tmpWChar,&cursor,0,NULL,(*curlRequest)->deepness);
-//    wprintf(L"Result : %ls",tmpWChar);
-    free(tmpWChar);
-    tmpWChar=malloc(sizeof(wchar_t));
-    tmpWChar[0]=L'\0';
-    writeJsonElement((*curlRequest)->response->json,&tmpWChar,1000);
-    wprintf(L"Result : %s",tmpWChar);
+    // wprintf("RESULT !!! :%ls",tmpWChar);
+    (*curlRequest)->response->json=readJsonString((*curlRequest)->response->string,&cursor,0,NULL,(*curlRequest)->deepness);
+//    wprintf("Result : %ls",tmpWChar);
+    free((*curlRequest)->response->string);
+    (*curlRequest)->response->string=malloc(sizeof(char));
+    (*curlRequest)->response->string[0]='\0';
+    writeJsonElement((*curlRequest)->response->json,&(*curlRequest)->response->string,1000);
+    printf("REPONSE%s",(*curlRequest)->response->string);
 
     return 1;
 
@@ -278,30 +273,30 @@ short curlGetJson(CurlRequest **curlRequest){
 short curlSetOpt(CurlRequest **curlRequest, CURL *curl, struct curl_slist *headers){
 
 
-    // //Requête HTTP méthode GET
-    // if((*curlRequest)->method!=NULL){
-    //     curl_easy_setopt(curl, CURLOPT_CUSTOMREQUEST, (*curlRequest)->method);
-    // }
-    // //URL de la requête
-    // curl_easy_setopt(curl, CURLOPT_URL, (*curlRequest)->url);
-    // curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, 1L);
-    // //Ne vérifie pas l'authenticité du certificat envoyé par le serveur quand la valeur est à 0, vérifie quand la valeur est à 1.
-    // //J'ai mis la valeur à 0 car *curl stopait la connexion avec l'API openfoodfacts lorsqu'une vérification était effectuée.
-    // curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0);
+    //Requête HTTP méthode GET
+    if((*curlRequest)->method!=NULL){
+        curl_easy_setopt(curl, CURLOPT_CUSTOMREQUEST, (*curlRequest)->method);
+    }
+    //URL de la requête
+    curl_easy_setopt(curl, CURLOPT_URL, (*curlRequest)->url);
+    curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, 1L);
+    //Ne vérifie pas l'authenticité du certificat envoyé par le serveur quand la valeur est à 0, vérifie quand la valeur est à 1.
+    //J'ai mis la valeur à 0 car *curl stopait la connexion avec l'API openfoodfacts lorsqu'une vérification était effectuée.
+    curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0);
 
-    // //Création d'un header vide
-    // curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
+    //Création d'un header vide
+    curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
 
-    // if((*curlRequest)->responseType==_JSON_){
-    //     curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, curlToString);
-    //     curl_easy_setopt(curl, CURLOPT_WRITEDATA, (*curlRequest)->response);
-    // }
-    // else if((*curlRequest)->responseType==_FILE_){
-    //     (*curlRequest)->response->file->filePointer=openFile((*curlRequest)->response->file->path,(*curlRequest)->response->file->openMode);
-    //     curl_easy_setopt(curl, CURLOPT_ACCEPT_ENCODING, "deflate");
-    //     curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, curlToFile);
-    //     curl_easy_setopt(curl, CURLOPT_WRITEDATA, (*curlRequest)->response->file->filePointer);
-    // }
+    if((*curlRequest)->responseType==_JSON_){
+        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, curlToString);
+        curl_easy_setopt(curl, CURLOPT_WRITEDATA, (*curlRequest)->response);
+    }
+    else if((*curlRequest)->responseType==_FILE_){
+        (*curlRequest)->response->file->filePointer=openFile((*curlRequest)->response->file->path,(*curlRequest)->response->file->openMode);
+        curl_easy_setopt(curl, CURLOPT_ACCEPT_ENCODING, "deflate");
+        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, curlToFile);
+        curl_easy_setopt(curl, CURLOPT_WRITEDATA, (*curlRequest)->response->file->filePointer);
+    }
 
     return 1;
 }

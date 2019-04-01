@@ -4,6 +4,7 @@
 #include <wchar.h>
 #include <wctype.h>
 #include <errno.h>
+#include <locale.h>
 
 #include <jsonHandler.h>
 #include <jsonReader.h>
@@ -12,35 +13,51 @@
 
 JsonElement *readJsonFile(FILE *jsonFile,int deepness){
 
-    wchar_t *jsonContent;
+    char *jsonContent;
     JsonElement *json;
     unsigned long cursor=0;
     jsonContent=getFileContent(jsonFile);
+    
+    printf("COUCU");
     if((formatJsonString(&jsonContent))==0){
         createErrorReport("Json string formating error : ",__FILE__,__LINE__,__DATE__,__TIME__);
     }
-    wprintf(L"JSON FORMATED : %ls",jsonContent);
+    // puts("TTI");
+    // printf("toto");
+    // puts("TTI");
+
+    
+    // printf("toto");
+    fflush(stdout);
+
     if((json=readJsonString(jsonContent,&cursor,0,NULL,deepness))==NULL){
         createErrorReport("Json string formating error : ",__FILE__,__LINE__,__DATE__,__TIME__);
         free(jsonContent);
         return NULL;
     }
+
+    // printf("json->name : %ld",json->sizeArrChildElement);
+    // puts("TTI");
+
+    
+    fflush(stdout);
+
     return json;
 }
 
-short formatJsonString(wchar_t **jsonString){
+short formatJsonString(char **jsonString){
 
-    wchar_t *tmpString;
+    char *tmpString;
     unsigned long i;
     unsigned long j=0;
-    if((tmpString=malloc(sizeof(wchar_t*)*(wcslen(*jsonString)+1)))==NULL){
+    if((tmpString=malloc(sizeof(char*)*(strlen(*jsonString)+1)))==NULL){
         createErrorReport("Memory allocation error :  ",__FILE__,__LINE__,__DATE__,__TIME__);
         return 0;
     }
     //Pour chaques caractères de la chaine json vérifie si c'est un retour à la ligne ou un espace
     //et s'il est délimité par des guillemets s'il n'est pas délimité par des guillemets il est supprimé
-    for(i=0;i<wcslen(*jsonString);i++){
-        if((*jsonString)[i]!=L' '&&(*jsonString)[i]!=L'\n'&&controlCharInString((*jsonString),i)==0){
+    for(i=0;i<strlen(*jsonString);i++){
+        if((*jsonString)[i]!=' '&&(*jsonString)[i]!='\n'&&controlCharInString((*jsonString),i)==0){
             tmpString[j]=(*jsonString)[i];
             j++;
         }
@@ -56,13 +73,13 @@ short formatJsonString(wchar_t **jsonString){
 
 }
 
-JsonElement *readJsonString(wchar_t *jsonString,unsigned long *cursor,unsigned long elementPosition, JsonElement *parentElement, int deepness){
+JsonElement *readJsonString(char *jsonString,unsigned long *cursor,unsigned long elementPosition, JsonElement *parentElement, int deepness){
 
     JsonElement *jsonElement;
     JsonType dataType;
     unsigned long lastCursorPosition=*cursor;
     Data *data;
-    wchar_t *name;
+    char *name;
     errno=0;
 
     if((data=malloc(sizeof(Data)))==NULL){
@@ -112,12 +129,12 @@ JsonElement *readJsonString(wchar_t *jsonString,unsigned long *cursor,unsigned l
     return jsonElement;
 }
 
-wchar_t *readName(wchar_t *jsonString, unsigned long *cursor){
+char *readName(char *jsonString, unsigned long *cursor){
 
-    wchar_t *name;
-    for(unsigned long i=*cursor; i<wcslen(jsonString);i++){
+    char *name;
+    for(unsigned long i=*cursor; i<strlen(jsonString);i++){
         //On estime qu'un nom ne peut pas être suivi de caractère d'ouverture ou de fermeture d'ensemble json.
-        if((jsonString[i]==L'['||jsonString[i]==L']'||jsonString[i]==L'{'||jsonString[i]==L'}')&&controlCharInString(jsonString,i)==0){
+        if((jsonString[i]=='['||jsonString[i]==']'||jsonString[i]=='{'||jsonString[i]=='}')&&controlCharInString(jsonString,i)==0){
             *cursor=i;
             return NULL;
         }
@@ -132,18 +149,18 @@ wchar_t *readName(wchar_t *jsonString, unsigned long *cursor){
 }
 
 
-short readData(wchar_t *jsonString, unsigned long *cursor,JsonType *dataType,Data *data){
+short readData(char *jsonString, unsigned long *cursor,JsonType *dataType,Data *data){
 
-    for(unsigned long i=*cursor; i<wcslen(jsonString);i++){
+    for(unsigned long i=*cursor; i<strlen(jsonString);i++){
         //Si un caractère d'ouverture d'ensemble json est présent et qu'il ne se trouve pas dans une chaine de caractère délimitée par des guillemets
         //alors on le type en _ARRAY_ ou _OBJECT_ en fonction du caractère
-        if(jsonString[i]==L'['&&controlCharInString(jsonString,i)==0){
+        if(jsonString[i]=='['&&controlCharInString(jsonString,i)==0){
             *cursor=(i+1);
             *dataType=_ARRAY_;
             data->nulData=NULL;
             return 0;
         }
-        else if(jsonString[i]==L'{'&&controlCharInString(jsonString,i)==0){
+        else if(jsonString[i]=='{'&&controlCharInString(jsonString,i)==0){
             *cursor=(i+1);
             *dataType=_OBJECT_;
             data->nulData=NULL;
@@ -151,7 +168,7 @@ short readData(wchar_t *jsonString, unsigned long *cursor,JsonType *dataType,Dat
         }
         //On applique succesivement les fonctions suivantes pour extraire les différents types présent dans la chaine,
         //la fonction de lecture est en première car la majorité des données lues actuellements sont de ce type.
-        if((jsonString[i]==L','||jsonString[i]==L']'||jsonString[i]==L'}')&&controlCharInString(jsonString,i)==0){
+        if((jsonString[i]==','||jsonString[i]==']'||jsonString[i]=='}')&&controlCharInString(jsonString,i)==0){
             if((data->strData=readStringType(jsonString,i))!=0){
                 *dataType=_STRING_;
                 *cursor=i+1;
@@ -183,22 +200,22 @@ short readData(wchar_t *jsonString, unsigned long *cursor,JsonType *dataType,Dat
 }
 
 
-unsigned long countChildElements(wchar_t *jsonString,unsigned long cursor,JsonType dataType,unsigned long *cursorEndArray){
+unsigned long countChildElements(char *jsonString,unsigned long cursor,JsonType dataType,unsigned long *cursorEndArray){
 
     unsigned long commaCounter=0;
     long tokenCounter=0;
-    wchar_t searchedToken;
-    wchar_t nonSearchedToken;
+    char searchedToken;
+    char nonSearchedToken;
 
     if(dataType==_OBJECT_){
-        searchedToken=L']';
-        nonSearchedToken=L'}';
+        searchedToken=']';
+        nonSearchedToken='}';
     }
     else if(dataType==_ARRAY_){
-        searchedToken=L'}';
-        nonSearchedToken=L']';
+        searchedToken='}';
+        nonSearchedToken=']';
     }
-    while(tokenCounter<1&&cursor<wcslen(jsonString)){
+    while(tokenCounter<1&&cursor<strlen(jsonString)){
         //A chaque caractère de fermeture rencontré, décrémente le compteur de délimiteur de 1 et inversement lors de caractère d'ouverture. L'objectif étant de ne pas compte le nombre d'éléments présent dans les sous ensembles de l'élément ciblé par la fonction
         if((jsonString[cursor]==searchedToken-2||jsonString[cursor]==nonSearchedToken-2)&&controlCharInString(jsonString,cursor)==0){
             tokenCounter--;
@@ -208,12 +225,12 @@ unsigned long countChildElements(wchar_t *jsonString,unsigned long cursor,JsonTy
         }
         if(tokenCounter>=0){
             //Le caractère ',' enous permet de savoir combien d'éléments sont présents dans un ensemble
-            if(jsonString[cursor]==L','){
+            if(jsonString[cursor]==','){
                 if(controlCharInString(jsonString,cursor)==0){
                     commaCounter++;
                 }
             }
-            if(commaCounter==0&&jsonString[cursor]!=L'{'&&jsonString[cursor]!=L'}'&&jsonString[cursor]!=L'['&&jsonString[cursor]!=L']'){
+            if(commaCounter==0&&jsonString[cursor]!='{'&&jsonString[cursor]!='}'&&jsonString[cursor]!='['&&jsonString[cursor]!=']'){
                 commaCounter++;
             }
         }
@@ -226,23 +243,23 @@ unsigned long countChildElements(wchar_t *jsonString,unsigned long cursor,JsonTy
     return commaCounter;
 }
 
-short controlCharInString(wchar_t *jsonString,unsigned long cursor){
+short controlCharInString(char *jsonString,unsigned long cursor){
 
     unsigned long quoteCounter=0;
     unsigned long i,j;
 
     //Parcours la chaine de caractère en sens inverse jusqu'à une guillement non échappée
     for(i = cursor ; i>0; i--){
-        if(jsonString[i]==L'\"'&&jsonString[i-1]!=L'\\'){
+        if(jsonString[i]=='\"'&&jsonString[i-1]!='\\'){
             quoteCounter++;
             //Vérifie la présence d'un caractère délimiteur délément json derrière une guillement
-            if(jsonString[i-1]==L','||jsonString[i-1]==L':'||jsonString[i-1]==L'{'||jsonString[i-1]==L'['||jsonString[i-1]==L'\n'||jsonString[i-1]==L' '){
+            if(jsonString[i-1]==','||jsonString[i-1]==':'||jsonString[i-1]=='{'||jsonString[i-1]=='['||jsonString[i-1]=='\n'||jsonString[i-1]==' '){
                 //Parcours la chaine dans l'autre sens avec un décallage de 1 caractère et effectue le meme traitement dans le sens inverse en ne prenant pas en compte le caractère ciblé par le curseur d'origine
-                for(j = i+1 ; j<wcslen(jsonString); j++){
-                    if(jsonString[j]==L'\"'&&jsonString[j-1]!=L'\\'){
+                for(j = i+1 ; j<strlen(jsonString); j++){
+                    if(jsonString[j]=='\"'&&jsonString[j-1]!='\\'){
                         quoteCounter++;
                         if(j!=cursor){
-                            if((jsonString[j+1]==L','||jsonString[j+1]==L':'||jsonString[j+1]==L'}'||jsonString[j+1]==L']'||jsonString[i-1]==L'\n'||jsonString[i-1]==L' ')&&quoteCounter%2==0){
+                            if((jsonString[j+1]==','||jsonString[j+1]==':'||jsonString[j+1]=='}'||jsonString[j+1]==']'||jsonString[i-1]=='\n'||jsonString[i-1]==' ')&&quoteCounter%2==0){
                                 //Est délimité par des guillemets
                                 return 1;
                             }
@@ -259,32 +276,32 @@ short controlCharInString(wchar_t *jsonString,unsigned long cursor){
     return 0;
 }
 
-short readDoubleType(wchar_t *jsonString,unsigned long cursor,Data *data){
+short readDoubleType(char *jsonString,unsigned long cursor,Data *data){
 
-    wchar_t *strVar;
+    char *strVar;
     short doteCounter=0;
     unsigned long strSize=0;
 
-    if(jsonString[cursor-1]==L'\"'&&jsonString[cursor-2]!=L'\\'){
+    if(jsonString[cursor-1]=='\"'&&jsonString[cursor-2]!='\\'){
         return 0;
     }
 
     for(unsigned long i=cursor-1;i!=0;i--){
         strSize++;
 
-        if(iswdigit(jsonString[i])==0&&jsonString[i]!=L'.'&&jsonString[i]!=L':'){
+        if(iswdigit(jsonString[i])==0&&jsonString[i]!='.'&&jsonString[i]!=':'){
             return 0;
         }
-        if(jsonString[i]==L'.'){
+        if(jsonString[i]=='.'){
             doteCounter++;
         }
-        if(doteCounter==1&&(jsonString[i-1]==L':'||jsonString[i-1]==L'['||jsonString[i-1]==L'{'||jsonString[i-1]==L' '||jsonString[i-1]==L'\n'||jsonString[i-1]==L',')){
+        if(doteCounter==1&&(jsonString[i-1]==':'||jsonString[i-1]=='['||jsonString[i-1]=='{'||jsonString[i-1]==' '||jsonString[i-1]=='\n'||jsonString[i-1]==',')){
 
-            wcschr(jsonString+i,'.')[0]=',';
-            if((strVar=malloc(sizeof(wchar_t)*(strSize+1)))!=NULL){
-                wcsncpy(strVar,jsonString+i,strSize);
-                strVar[strSize+1]=L'\0';
-                data->dblData=wcstod(strVar,NULL);
+            strchr(jsonString+i,'.')[0]=',';
+            if((strVar=malloc(sizeof(char)*(strSize+1)))!=NULL){
+                strncpy(strVar,jsonString+i,strSize);
+                strVar[strSize+1]='\0';
+                data->dblData=atof(strVar);
                 free(strVar);
             }
             return 1;
@@ -294,29 +311,29 @@ short readDoubleType(wchar_t *jsonString,unsigned long cursor,Data *data){
     return 0;
 }
 
-short readLongType(wchar_t *jsonString,unsigned long cursor,Data *data){
+short readLongType(char *jsonString,unsigned long cursor,Data *data){
 
-    wchar_t *strVar;
+    char *strVar;
     unsigned long strSize=0;
-    if(jsonString[cursor-1]==L'\"'&&jsonString[cursor-2]!=L'\\'){
+    if(jsonString[cursor-1]=='\"'&&jsonString[cursor-2]!='\\'){
         return 0;
     }
 
     for(unsigned long i=cursor-1;i!=0;i--){
 
         strSize++;
-        if(iswdigit(jsonString[i])==0&&jsonString[i]!=L':'&&jsonString[i]!=L' '&&jsonString[i]!=L'\n'){
+        if(iswdigit(jsonString[i])==0&&jsonString[i]!=':'&&jsonString[i]!=' '&&jsonString[i]!='\n'){
             return 0;
         }
-        if(jsonString[i]==L'.'){
+        if(jsonString[i]=='.'){
             return 0;
         }
-        if(jsonString[i-1]==L':'||jsonString[i-1]==L'['||jsonString[i-1]==L'{'||jsonString[i-1]==L' '||jsonString[i-1]==L'\n'||jsonString[i-1]==L','){
+        if(jsonString[i-1]==':'||jsonString[i-1]=='['||jsonString[i-1]=='{'||jsonString[i-1]==' '||jsonString[i-1]=='\n'||jsonString[i-1]==','){
 
-            if((strVar=malloc(sizeof(wchar_t)*(strSize)))!=NULL){
-                wcsncpy(strVar,jsonString+i,strSize);
+            if((strVar=malloc(sizeof(char)*(strSize)))!=NULL){
+                strncpy(strVar,jsonString+i,strSize);
                 strVar[strSize]='\0';
-                data->lngData=wcstol(strVar,NULL,10);
+                data->lngData=atol(strVar);
                 free(strVar);
             }
             return 1;
@@ -325,9 +342,9 @@ short readLongType(wchar_t *jsonString,unsigned long cursor,Data *data){
     return 0;
 }
 
-short readBolType(wchar_t *jsonString,unsigned long cursor,Data *data){
+short readBolType(char *jsonString,unsigned long cursor,Data *data){
 
-    if(jsonString[cursor-1]==L'\"'&&jsonString[cursor-2]!=L'\\'){
+    if(jsonString[cursor-1]=='\"'&&jsonString[cursor-2]!='\\'){
         return 0;
     }
     for(unsigned long i=cursor-1;i!=0;i--){
@@ -335,13 +352,13 @@ short readBolType(wchar_t *jsonString,unsigned long cursor,Data *data){
         if(jsonString[i]=='.'||iswdigit(jsonString[i])){
             return 0;
         }
-        if(jsonString[i-1]==L':'||jsonString[i-1]==L'['||jsonString[i-1]==L'{'||jsonString[i-1]==L' '||jsonString[i-1]==L'\n'||jsonString[i-1]==L','){
+        if(jsonString[i-1]==':'||jsonString[i-1]=='['||jsonString[i-1]=='{'||jsonString[i-1]==' '||jsonString[i-1]=='\n'||jsonString[i-1]==','){
 
-            if(wcsncmp(jsonString+i,L"true",wcslen(L"true"))==0){
+            if(strncmp(jsonString+i,"true",strlen("true"))==0){
                 data->bolData=1;
                 return 1;
             }
-            else if(wcsncmp(jsonString+i,L"false",wcslen(L"false"))==0){
+            else if(strncmp(jsonString+i,"false",strlen("false"))==0){
                 data->bolData=0;
                 return 1;
             }
@@ -350,9 +367,9 @@ short readBolType(wchar_t *jsonString,unsigned long cursor,Data *data){
     return 0;
 }
 
-short readNullType(wchar_t *jsonString,unsigned long cursor,Data *data){
+short readNullType(char *jsonString,unsigned long cursor,Data *data){
 
-    if(jsonString[cursor-1]==L'\"'&&jsonString[cursor-2]!=L'\\'){
+    if(jsonString[cursor-1]=='\"'&&jsonString[cursor-2]!='\\'){
         return 0;
     }
     for(unsigned long i=cursor-1;i!=0;i--){
@@ -360,10 +377,10 @@ short readNullType(wchar_t *jsonString,unsigned long cursor,Data *data){
         if(jsonString[i]=='.'||iswdigit(jsonString[i])){
             return 0;
         }
-        if(jsonString[i-1]==L':'||jsonString[i-1]==L'['||jsonString[i-1]==L'{'||jsonString[i-1]==L' '||jsonString[i-1]==L'\n'||jsonString[i-1]==L','){
-            if(wcsncmp(jsonString+i,L"null",wcslen(L"null"))==0){
-                if((data->strData=malloc(sizeof(wchar_t)*(wcslen(L"null")+1)))!=NULL){
-                    wcscpy(data->strData,L"null");
+        if(jsonString[i-1]==':'||jsonString[i-1]=='['||jsonString[i-1]=='{'||jsonString[i-1]==' '||jsonString[i-1]=='\n'||jsonString[i-1]==','){
+            if(strncmp(jsonString+i,"null",strlen("null"))==0){
+                if((data->strData=malloc(sizeof(char)*(strlen("null")+1)))!=NULL){
+                    strcpy(data->strData,"null");
                 }
                 return 1;
             }
@@ -372,24 +389,24 @@ short readNullType(wchar_t *jsonString,unsigned long cursor,Data *data){
     return 0;
 }
 
-wchar_t *readStringType(wchar_t *jsonString, unsigned long cursor){
+char *readStringType(char *jsonString, unsigned long cursor){
 
-    wchar_t *strVar;
+    char *strVar;
     short quoteCounter=0;
     unsigned long strSize=0;
 
-    if(jsonString[cursor-1]!=L'\"'){
+    if(jsonString[cursor-1]!='\"'){
         return NULL;
     }
 
     for(unsigned long i=cursor;i!=0;i--){
-        if(jsonString[i]==L'\"'&&jsonString[i-1]!='\\'){
+        if(jsonString[i]=='\"'&&jsonString[i-1]!='\\'){
             quoteCounter++;
         }
         if(quoteCounter==2){
-            if((strVar=malloc(sizeof(wchar_t)*(strSize-1)))!=NULL){
-                wcsncpy(strVar,jsonString+i+1,strSize-2);
-                strVar[strSize-2]=L'\0';
+            if((strVar=malloc(sizeof(char)*(strSize-1)))!=NULL){
+                strncpy(strVar,jsonString+i+1,strSize-2);
+                strVar[strSize-2]='\0';
             }
             return strVar;
         }

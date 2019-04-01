@@ -10,13 +10,14 @@
 
 
 
-JsonElement *initJsonElement(unsigned long sizeArrChildElement, unsigned long elementPosition, wchar_t *name, Data *data, JsonType dataType, JsonElement *parentElement){
+JsonElement *initJsonElement(unsigned long sizeArrChildElement, unsigned long elementPosition, char *name, Data *data, JsonType dataType, JsonElement *parentElement){
 
     JsonElement *jsonElement;
     if((jsonElement=malloc(sizeof(JsonElement)))==NULL){
         createErrorReport("Memory allocation error : ",__FILE__,__LINE__,__DATE__,__TIME__);
         return NULL;
     }
+
     jsonElement->name=name;
     jsonElement->sizeArrChildElement=sizeArrChildElement;
     jsonElement->elementPosition=elementPosition;
@@ -37,10 +38,10 @@ JsonElement *initJsonElement(unsigned long sizeArrChildElement, unsigned long el
 
 
 
-JsonElement *searchJsonElement(JsonElement *jsonElement, wchar_t *searchedName,Data *searchedValue, JsonType searchedType, unsigned int *elementPosition){
+JsonElement *searchJsonElement(JsonElement *jsonElement, char *searchedName,Data *searchedValue, JsonType searchedType, unsigned int *elementPosition){
     short bol=0;
 
-        if(jsonElement->name!=NULL&&jsonElement->jsonType==searchedType&&wcscmp(jsonElement->name,searchedName)==0){
+        if(jsonElement->name!=NULL&&jsonElement->jsonType==searchedType&&strcmp(jsonElement->name,searchedName)==0){
             if(searchedValue!=NULL) {
                 switch (jsonElement->jsonType) {
                     case _DOUBLE_:
@@ -54,7 +55,7 @@ JsonElement *searchJsonElement(JsonElement *jsonElement, wchar_t *searchedName,D
                         break;
                     default:
                         if (jsonElement->jsonType == _STRING_ || jsonElement->jsonType == _NULL_) {
-                            bol = wcscmp(jsonElement->data->strData, searchedValue->strData) == 0 ? (short) 1
+                            bol = strcmp(jsonElement->data->strData, searchedValue->strData) == 0 ? (short) 1
                                                                                                   : (short) 0;
                         }
                         break;

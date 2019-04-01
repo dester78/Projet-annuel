@@ -4,6 +4,7 @@
 #include <string.h>
 #include <errno.h>
 #include <wchar.h>
+#include <wctype.h>
 #include <locale.h>
 
 #include <convertCharHandler.h>
@@ -17,9 +18,9 @@ FileIndex *initFileIndex(char *fileIndexPath){
     FileIndex *fileIndex;
     FILE *srcFile;
     JsonElement *jsonElement;
-    wchar_t *jsonString;
+    char *jsonString;
 
-    if((jsonString=malloc(sizeof(wchar_t)))==NULL){
+    if((jsonString=malloc(sizeof(char)))==NULL){
         createErrorReport("Memory allocation error : ",__FILE__,__LINE__,__DATE__,__TIME__);
         return NULL;
     }
@@ -32,8 +33,10 @@ FileIndex *initFileIndex(char *fileIndexPath){
 
     if((srcFile=openFile(fileIndexPath,"r"))!=NULL){
 
-        jsonElement=readJsonFile(srcFile,6);
+        jsonElement=readJsonFile(srcFile,10);
+        
         writeJsonElement(jsonElement,&jsonString,3000);
+        printf("OK WRITE : %s",jsonString);
         fileIndex->sizeArrayFile=jsonElement->arrChildElement[0]->sizeArrChildElement;
         if((fileIndex->arrayFile=malloc(sizeof(File*)*fileIndex->sizeArrayFile))==NULL){
             createErrorReport("Memory allocation error : ",__FILE__,__LINE__,__DATE__,__TIME__);
@@ -44,7 +47,7 @@ FileIndex *initFileIndex(char *fileIndexPath){
             for(int j=0;j<(int)jsonElement->arrChildElement[i]->sizeArrChildElement;j++){
 
 
-                OpenTime openTime=wcscmp(L"now",jsonElement->arrChildElement[i]->arrChildElement[j]->arrChildElement[4]->data->strData)==0?_NOW_:_LATER_;
+                OpenTime openTime=strcmp("now",jsonElement->arrChildElement[i]->arrChildElement[j]->arrChildElement[4]->data->strData)==0?_NOW_:_LATER_;
                 if((fileIndex->arrayFile[j]=initFileElement(
                         jsonElement->arrChildElement[i]->arrChildElement[j]->arrChildElement[0]->data->strData,
                         jsonElement->arrChildElement[i]->arrChildElement[j]->arrChildElement[1]->data->strData,
@@ -61,6 +64,8 @@ FileIndex *initFileIndex(char *fileIndexPath){
         createErrorReport("Opening index file error : ",__FILE__,__LINE__,__DATE__,__TIME__);
         return NULL;
     }
+
+    printf("OK FILE INDEX");
 
     return fileIndex;
 }
@@ -80,7 +85,7 @@ File *selectFile(FileIndex *fileIndex, char *searchedName){
 
 
 
- File *initFileElement(wchar_t *fileName, wchar_t *path, wchar_t *openMode,wchar_t *flux,OpenTime openTime){
+ File *initFileElement(char *fileName, char *path, char *openMode,char *flux,OpenTime openTime){
 
     File *fileElement;
 
@@ -89,20 +94,27 @@ File *selectFile(FileIndex *fileIndex, char *searchedName){
          return NULL;
      }
 
-     if(wCharToChar(&fileName,&fileElement->name,_CONSERV_,_CONSERV_)==0||wCharToChar(&path,&fileElement->path,_CONSERV_,_CONSERV_)==0 || wCharToChar(&openMode,&fileElement->openMode,_CONSERV_,_CONSERV_) == 0){
-         createErrorReport("Translating wide char error : ",__FILE__,__LINE__,__DATE__,__TIME__);
-         return NULL;
-     }
+     fileElement->name=malloc(sizeof(char)*(strlen(fileName)+1));
+     strcpy(fileElement->name,fileName);
+     fileElement->path=malloc(sizeof(char)*(strlen(path)+1));
+     strcpy(fileElement->path,path);
+     fileElement->openMode=malloc(sizeof(char)*(strlen(openMode)+1));
+     strcpy(fileElement->openMode,openMode);
+
+    //  if(wCharToChar(&fileName,&fileElement->name,_CONSERV_,_CONSERV_)==0||wCharToChar(&path,&fileElement->path,_CONSERV_,_CONSERV_)==0 || wCharToChar(&openMode,&fileElement->openMode,_CONSERV_,_CONSERV_) == 0){
+    //      createErrorReport("Translating wide char error : ",__FILE__,__LINE__,__DATE__,__TIME__);
+    //      return NULL;
+    //  }
 
      if(openTime==_NOW_){
-         if(wcscmp(flux,L"null")!=0){
-             if(wcscmp(flux,L"stderr")==0) {
+         if(strcmp(flux,"null")!=0){
+             if(strcmp(flux,"stderr")==0) {
                  fileElement->filePointer=openFluxFile(fileElement->path,fileElement->openMode,stderr);
              }
-             else if(wcscmp(flux,L"stdin")==0) {
+             else if(strcmp(flux,"stdin")==0) {
                  fileElement->filePointer=openFluxFile(fileElement->path,fileElement->openMode,stdin);
              }
-             else if(wcscmp(flux,L"stdout")==0) {
+             else if(strcmp(flux,"stdout")==0) {
                  fileElement->filePointer=openFluxFile(fileElement->path,fileElement->openMode,stdout);
              }
          }
@@ -141,7 +153,9 @@ FILE *openFile(char *path, char *openMode){
     FILE *file;
     short bol=0;
 
-
+    printf("PATH : %s",path);
+    printf("PATH : %s",openMode);
+    fflush(stdout);
     if((file=fopen(path,openMode))!=NULL){
         bol=1;
     }
@@ -193,28 +207,31 @@ unsigned long countFileChar(FILE *filePtr){
     return fileSize;
 }
 
-wchar_t *getFileContent(FILE *filePtr){
+char *getFileContent(FILE *filePtr){
 
-    wchar_t *fileContent;
+    char *fileContent;
+
     unsigned long fileSize=countFileChar(filePtr);
-    if((fileContent=malloc(sizeof(wchar_t)*fileSize+1))==NULL){
+    if((fileContent=malloc(sizeof(char)*fileSize+1))==NULL){
         createErrorReport("Memory allocation error : ",__FILE__,__LINE__,__DATE__,__TIME__);
         return NULL;
     }
-    wcfread(fileContent,fileSize,filePtr);
-    fileContent[fileSize]=L'\0';
+    fread(fileContent, fileSize, 1, filePtr);
+    // wcfread(fileContent,fileSize,filePtr);
+    // printf("CONTENT : %s",fileContent);
+    fileContent[fileSize]='\0';
     return fileContent;
 }
 
-size_t wcfread(wchar_t *string,size_t size, FILE *file){
+// size_t wcfread(char *string,size_t size, FILE *file){
 
-    for (size_t i = 0; i < size; i++) { 
-        if ((string[i]=fgetwc(file)) == WEOF) { 
-            return i; 
-        } 
-    } 
-    return size; 
-}
+//     for (size_t i = 0; i < size; i++) { 
+//         if ((string[i]=fgetwc(file)) == WEOF) { 
+//             return i; 
+//         } 
+//     } 
+//     return size; 
+// }
 
 void createErrorReport(char *errorMessage,char * fileError, int lineError, char  *dateError, char *timeError){
 

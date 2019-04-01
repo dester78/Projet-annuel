@@ -42,9 +42,9 @@ size_t curlToFile(void *ptr, size_t size, size_t nmemb, FILE *curlResponse);
 short curlGetJson(CurlRequest **curlRequest);
 
 short curlSetOpt(CurlRequest **curlRequest, CURL *curl, struct curl_slist *header);
-CurlRequest *jsonToCurl(JsonElement *jsonElement,wchar_t *urlName,FileIndex *fileIndex);
+CurlRequest *jsonToCurl(JsonElement *jsonElement,char *urlName,FileIndex *fileIndex);
 char *writeUrl(JsonElement *jsonElement,  JsonElement *urlNeededValues);
-short catTokenWithUrl(JsonElement *urlToken, JsonElement *urlElement,wchar_t **url);
+short catTokenWithUrl(JsonElement *urlToken, JsonElement *urlElement,char **url);
 
 short curlConnect(CurlRequest **curlRequest);
 short freeCurlResponse(CurlResponse **curlResponse);

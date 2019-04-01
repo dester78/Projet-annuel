@@ -1,17 +1,14 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/CScan.dir/src/convertCharHandler.c.obj"
-  "CMakeFiles/CScan.dir/src/curlHandler.c.obj"
-  "CMakeFiles/CScan.dir/src/fileHandler.c.obj"
-  "CMakeFiles/CScan.dir/src/gtkCallbacks.c.obj"
-  "CMakeFiles/CScan.dir/src/gtkHandler.c.obj"
-  "CMakeFiles/CScan.dir/src/jsonHandler.c.obj"
-  "CMakeFiles/CScan.dir/src/jsonReader.c.obj"
-  "CMakeFiles/CScan.dir/src/jsonWriter.c.obj"
-  "CMakeFiles/CScan.dir/src/main.c.obj"
+  "CMakeFiles/CScan.dir/src/main.c.o"
+  "CMakeFiles/CScan.dir/src/curlHandler.c.o"
+  "CMakeFiles/CScan.dir/src/fileHandler.c.o"
+  "CMakeFiles/CScan.dir/src/jsonHandler.c.o"
+  "CMakeFiles/CScan.dir/src/gtkHandler.c.o"
+  "CMakeFiles/CScan.dir/src/gtkCallbacks.c.o"
+  "CMakeFiles/CScan.dir/src/jsonReader.c.o"
+  "CMakeFiles/CScan.dir/src/jsonWriter.c.o"
   "bin/Debug/CScan.pdb"
-  "bin/Debug/CScan.exe"
-  "bin/Debug/CScan.exe.manifest"
-  "bin/Debug/libCScan.dll.a"
+  "bin/Debug/CScan"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -2,6 +2,6 @@
 #define BLUETOOTHHANDLER
 
 
-BOOL FindingBtDevices();
+// BOOL FindingBtDevices();
 
 #endif

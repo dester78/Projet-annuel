@@ -1,5 +1,5 @@
 #List of files to translate :
-glade/loginForm.glade
-glade/mainWindow.glade
+glade/lloginForm.glade
+glade/lmainWindow.glade
 glade/listElement.glade
 src/main.c

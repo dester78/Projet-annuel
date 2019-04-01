@@ -25,7 +25,14 @@
 			"bluetoothapis.h": "c",
 			"stdlib.h": "c",
 			"stdio.h": "c",
-			"locale.h": "c"
+			"locale.h": "c",
+			"ctype.h": "c",
+			"wctype.h": "c",
+			"config.h": "c",
+			"socket.h": "c",
+			"bluetooth.h": "c",
+			"hci_lib.h": "c",
+			"hci.h": "c"
 		}
 	}
 }

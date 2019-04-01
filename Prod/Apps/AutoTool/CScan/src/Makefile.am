@@ -1,4 +1,15 @@
 bin_PROGRAMS = CScan
+include_HEADERS=    \
+    bluetoothHandler.h  \
+    convertCharHandler.h    \
+    curlHandler.h   \
+    fileHandler.h   \
+    gtkCallbacks.h  \
+    gtkHandler.h    \
+    jsonHandler.h   \
+    jsonReader.h    \
+    jsonWriter.h    
+
 CScan_SOURCES =\
     main.c  \
     bluetoothHandler.c  \
@@ -9,31 +20,24 @@ CScan_SOURCES =\
     gtkHandler.c    \
     jsonHandler.c   \
     jsonReader.c    \
-    jsonWriter.c    \
-	bluetoothHandler.h  \
-    convertCharHandler.h    \
-    curlHandler.h   \
-    fileHandler.h   \
-    gtkCallbacks.h  \
-    gtkHandler.h    \
-    jsonHandler.h   \
-    jsonReader.h    \
-    jsonWriter.h    
+    jsonWriter.c    
+
+
+AM_CPPFLAGS = -DCSCANLOCALEDIR=\"${CSCANLOCALEDIR}\"
 
 CScan_CPPFLAGS = \
-	-I$(top_srcdir)	
-	-DG_LOG_DOMAIN=\"CScan\"			\
+	-I $(top_srcdir) \
+    -DG_LOG_DOMAIN=\"GnomeHello\"			\
 	-DDATADIR=\""$(pkgdatadir)"\"			\
-	$(DISABLE_DEPRECATED)				\
-	$(AM_CPPFLAGS)
+	-DCSCANLOCALEDIR=\""$(datadir)/locale"\"	\
+    $(CSCAN_CFLAGS)	
+
 
 CScan_CFLAGS = \
-	   $(CSCAN_CFLAGS)	\
-       $(GTK_CFLAGS)    \
-       $(GLIB_CFLAGS)    \
-       $(LIBCURL_CFLAGS)	\
-       $(PANGO_CFLAGS)	\
-	   $(WARN_CFLAGS)		\
+        -pedantic   \
+        -Wall   \
+        -Wextra \
+	   $(WARN_CFLAGS)\
 	   $(AM_CFLAGS)
 
 CScan_LDFLAGS = $(AM_LDFLAGS)
@@ -41,9 +45,5 @@ CScan_LDFLAGS = $(AM_LDFLAGS)
 
 CScan_LDADD = \
 	$(CSCAN_LIBS)	\
-    $(GTK_LIBS) \
-    $(GLIB_LIBS) \
-    $(LIBCURL_LIBS)	\
-    $(PANGO_LIBS)	\
  	$(INTLLIBS)
 

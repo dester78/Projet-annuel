@@ -1,0 +1,55 @@
+
+AC_PREREQ(2.61)
+AC_INIT([CScan], [1.0], [support@fight-food-waste.ovh])
+
+AC_CONFIG_SRCDIR([src])
+AC_CONFIG_HEADERS([config.h])
+AC_CONFIG_MACRO_DIR([m4])
+AC_CONFIG_AUX_DIR([build-aux])
+
+AM_INIT_AUTOMAKE([1.10 foreign dist-bzip2 no-dist-gzip])
+AM_PATH_GTK_3_0(,,AC_MSG_ERROR(windoe-default needs GTK+-3))
+
+m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
+
+# Check for programs    
+AX_CHECK_ENABLE_DEBUG
+
+# Initialize libtool
+LT_PREREQ([2.2.6])
+LT_INIT
+
+AC_HEADER_STDC
+AC_PROG_CC
+
+
+PKG_CHECK_MODULES([GTK], gtk+-3.0)
+# PKG_CHECK_MODULES([GLIB], glib-2.0)
+PKG_CHECK_MODULES([LIBCURL], libcurl )
+# PKG_CHECK_MODULES([PANGO], pango)
+
+
+
+
+IT_PROG_INTLTOOL([0.40.0])
+
+AC_SUBST([GETTEXT_PACKAGE], [CScan])
+AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE], "$GETTEXT_PACKAGE", [Define to the gettext package name.])
+
+
+# *************************************
+# *************************************
+
+AC_CONFIG_FILES([
+Makefile
+src/Makefile
+ca/Makefile
+css/Makefile
+bin/Makefile
+logs/Makefile
+glade/Makefile
+json/Makefile
+po/Makefile
+])
+
+AC_OUTPUT

@@ -1,6 +1,6 @@
 {
-  "mainWindow": "glade/mainWindow.glade",
-  "listElement": "glade/listElement.glade",
-  "loginForm": "glade/loginForm.glade",
-  "styleSheet": "css/gtkStyleSheet.css"
+  "mainWindow": "/usr/local/share/cscan/glade/mainWindow.glade",
+  "listElement": "/usr/local/share/cscan/glade/listElement.glade",
+  "loginForm": "/usr/local/share/cscan/glade/loginForm.glade",
+  "styleSheet": "/usr/local/share/cscan/css/gtkStyleSheet.css"
 }

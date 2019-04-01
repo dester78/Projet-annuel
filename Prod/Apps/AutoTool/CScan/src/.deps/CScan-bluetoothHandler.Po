@@ -1,1 +1,3 @@
-CScan-bluetoothHandler.o: bluetoothHandler.c
+CScan-bluetoothHandler.o: bluetoothHandler.c /usr/include/stdc-predef.h
+
+/usr/include/stdc-predef.h:

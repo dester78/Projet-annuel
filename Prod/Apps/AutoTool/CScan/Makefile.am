@@ -1,6 +1,34 @@
-AUTOMAKE_OPTIONS = foreign
-SUBDIRS = src bin ca css glade json logs po
+SUBDIRS = src ca css glade json logs po
 
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
+NULL =
+
+desktopdir = $(datadir)/applications
+desktop_in_files = CScan.desktop.in
+desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
+
+@INTLTOOL_DESKTOP_RULE@
+
+EXTRA_DIST = \
+	autogen.sh \
+	$(desktop_in_files) \
+	m4/ax_require_defined.m4
+
+CLEANFILES = $(desktop_DATA)
+
+DISTCLEANFILES =
+
+
+# Build ChangeLog from GIT  history
+ChangeLog:
+	$(AM_V_GEN) if test -d $(top_srcdir)/.git; then \
+		GIT_DIR="$(top_srcdir)/.git" git log --stat > $@; \
+	fi
+
+dist: ChangeLog
+
+.PHONY: ChangeLog
+
+-include $(top_srcdir)/git.mk
 

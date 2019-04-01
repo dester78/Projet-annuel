@@ -1,6 +1,39 @@
-msgid "OK CURL"
-msgstr "TEST"
+# French translations for CScan package.
+# Copyright (C) 2019 THE CScan'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the CScan package.
+# BAILLEUL <dester78@dester78-g551jw>, 2019.
+#
 msgid ""
-msgstr "CAMRACERZEGZEG"
+msgstr ""
+"Project-Id-Version: CScan 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-29 02:04+0100\n"
+"PO-Revision-Date: 2019-03-29 02:17+0100\n"
+"Last-Translator: BAILLEUL <dester78@dester78-g551jw>\n"
+"Language-Team: French\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: mainWindow.glade:152
+msgid "Aid_e"
+msgstr "fefzefdfzdf"
+
+#: mainWindow.glade:9
+msgid "FFWScan"
+msgstr "fzdfzdfz"
+
+#: glade/mainWindow.glade:144
+msgctxt "fr"
 msgid "_Affichage"
-msgstr "CAMRACERZEGZEG"
+msgstr "fzdefzefzef"
+
+#: mainWindow.glade:29
+msgid "_Fichier"
+msgstr "zefzef"
+
+#: mainWindow.glade:94
+msgid "É_dition"
+msgstr "fzefzdfzdf"

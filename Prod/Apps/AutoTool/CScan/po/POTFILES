@@ -1,0 +1,4 @@
+	../glade/lloginForm.glade \
+	../glade/lmainWindow.glade \
+	../glade/listElement.glade \
+	../src/main.c

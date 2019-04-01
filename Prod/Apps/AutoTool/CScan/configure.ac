@@ -1,6 +1,6 @@
 
-AC_PREREQ(2.61)
-AC_INIT([CScan], [1.0], [support@fight-food-waste.ovh])
+AC_PREREQ([2.69])
+AC_INIT([CScan],[1.0],[support@fight-food-waste.ovh])
 
 AC_CONFIG_SRCDIR([src])
 AC_CONFIG_HEADERS([config.h])
@@ -9,34 +9,34 @@ AC_CONFIG_AUX_DIR([build-aux])
 
 AM_INIT_AUTOMAKE([1.10 foreign dist-bzip2 no-dist-gzip])
 
-m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([no])])
+m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
 
-# Check for programs
+
+# Check for programs    
 AX_CHECK_ENABLE_DEBUG
-AC_PROG_CC_C99
+AC_PROG_CC
+AC_HEADER_STDC
 
 # Initialize libtool
 LT_PREREQ([2.2.6])
 LT_INIT
 
-AC_HEADER_STDC
-AC_PROG_CC
+
+PKG_CHECK_MODULES([CSCAN], gtk+-3.0  libcurl bluez )
 
 
-PKG_CHECK_MODULES([GTK], gtk+-3.0)
-PKG_CHECK_MODULES([GLIB], glib-2.0)
-PKG_CHECK_MODULES([LIBCURL], libcurl )
-PKG_CHECK_MODULES([PANGO], pango)
-
-
-
+GETTEXT_PACKAGE=CScan
 
 IT_PROG_INTLTOOL([0.40.0])
 
-# AC_SUBST([GETTEXT_PACKAGE], [CScan])
-# AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE], "$GETTEXT_PACKAGE", [Define to the gettext package name.])
+AC_SUBST([GETTEXT_PACKAGE], [CScan])
+AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE], "$GETTEXT_PACKAGE", [Define to the gettext package name.])
 
 
+
+
+# CSCAN_LOCALEDIR=[${datadir}/locale]
+# AC_SUBST(CSCAN_LOCALEDIR)
 # *************************************
 # *************************************
 
@@ -45,11 +45,10 @@ Makefile
 src/Makefile
 ca/Makefile
 css/Makefile
-bin/Makefile
 logs/Makefile
 glade/Makefile
 json/Makefile
-po/Makefile
+po/Makefile.in
 ])
 
 AC_OUTPUT
