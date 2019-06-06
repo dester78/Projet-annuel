@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/toolbar"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        android:background="@color/colorSecondary2"
+        app:title="@string/welcome_message"
+        app:titleTextColor="#FFFFFF"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/nav_header_vertical_spacing">
+
+        <TextView
+            android:layout_marginTop="65dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_basic_size"
+            android:text="@string/connection_mail"
+            android:textColor="#000000"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/input_user_mail"
+            android:textSize="@dimen/text_basic_size"
+            android:inputType="textEmailAddress"/>
+
+        <TextView
+            android:layout_marginTop="65dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hint_pwd"
+            android:textSize="@dimen/text_basic_size"
+            android:textColor="#000000"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/input_user_mdp"
+            android:textSize="@dimen/text_basic_size"
+            android:inputType="textPassword"/>
+
+        <Button
+            android:layout_marginTop="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/colorPrimaryLight"
+            android:text="@string/connection_btn"
+            android:id="@+id/validation_btn"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/error_connection_message"
+            android:textColor="#FF0000"
+            android:textStyle="bold|italic"/>
+
+    </LinearLayout>
+
+</LinearLayout>

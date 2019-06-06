@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_margin="10dp"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:textSize="15dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Mes informations personnelles :"/>
+
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fp_icone_edit_profil"
+                android:src="@drawable/icone_edit_24dp"
+                android:layout_gravity="right"/>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <ViewSwitcher
+                android:id="@+id/fp_switcher_lastname"
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fp_placeholder_lastname"
+                    android:textColor="#000000"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fp_placeholder_lastname_edit"
+                    android:textColor="#000000"/>
+
+            </ViewSwitcher>
+
+            <ViewSwitcher
+                android:id="@+id/fp_switcher_firstname"
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fp_placeholder_firstname"
+                    android:textColor="#000000"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fp_placeholder_firstname_edit"
+                    android:textColor="#000000"/>
+
+            </ViewSwitcher>
+
+        </LinearLayout>
+
+        <ViewSwitcher
+            android:layout_width="match_parent"
+            android:id="@+id/fp_switcher_mail"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/fp_placeholder_mail"
+                android:textColor="#000000"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/fp_placeholder_mail_edit"
+                android:textColor="#000000"/>
+
+        </ViewSwitcher>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Adresse:"/>
+
+        <TextView
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/profil_empty_address"
+            android:id="@+id/fp_placeholder_empty_address"
+            android:textStyle="italic"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ViewSwitcher
+                android:layout_weight="0.2"
+                android:layout_width="0dp"
+                android:id="@+id/fp_switcher_number_address"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fp_placeholder_number_address"
+                    android:textColor="#000000"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fp_placeholder_number_address_edit"
+                    android:hint="N°"
+                    android:textColor="#000000"/>
+
+            </ViewSwitcher>
+            <ViewSwitcher
+                android:layout_width="0dp"
+                android:layout_weight="0.8"
+                android:id="@+id/fp_switcher_street_address"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fp_placeholder_street_address"
+                    android:textColor="#000000"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fp_placeholder_street_address_edit"
+                    android:hint="Street name"
+                    android:textColor="#000000"/>
+            </ViewSwitcher>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ViewSwitcher
+                android:layout_margin="0dp"
+                android:layout_weight="0.5"
+                android:layout_width="match_parent"
+                android:id="@+id/fp_switcher_zipcode_address"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fp_placeholder_zipcode_address"
+                    android:textColor="#000000"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fp_placeholder_zipcode_address_edit"
+                    android:hint="Code Postal"
+                    android:textColor="#000000"/>
+
+            </ViewSwitcher>
+
+            <ViewSwitcher
+                android:layout_margin="0dp"
+                android:layout_weight="0.5"
+                android:layout_width="match_parent"
+                android:id="@+id/fp_switcher_city_address"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fp_placeholder_city_address"
+                    android:textColor="#000000"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fp_placeholder_city_address_edit"
+                    android:hint="City"
+                    android:textColor="#000000"/>
+
+            </ViewSwitcher>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sauvegarder les changements"
+            android:visibility="invisible"
+            android:id="@+id/fp_save_change_btn" />
+
+        <Button
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:id="@+id/fp_change_pwd_btn"
+            android:text = "Changer de mot de passe"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/colorPrimary"/>
+
+    </LinearLayout>
+</ScrollView>

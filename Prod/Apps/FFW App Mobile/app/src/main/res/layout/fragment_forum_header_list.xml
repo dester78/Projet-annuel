@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/forumWelcomeMessage"
+        android:padding="10dp"
+        android:textSize="12dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_margin="10dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp"
+        android:textSize="12dp"
+        android:background="@color/colorPrimaryLight">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nouveau post"
+            android:textColor="#FFF"
+            android:layout_margin="5dp"
+            android:textStyle="bold"
+            android:textSize="12dp"
+
+            android:textAlignment="center" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Titre du post"
+            android:textSize="12dp"
+            android:textStyle="bold|italic"
+            android:textColor="#FFFFFF"
+            android:inputType="textCapCharacters"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:hint="Contenu"
+            android:textSize="12dp"
+            android:textColor="#FFFFFF"
+            android:inputType="textLongMessage|textMultiLine"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ff_author_name"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Poster"
+            android:textSize="12dp"
+
+            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/colorPrimaryDark"/>
+
+    </LinearLayout>
+</LinearLayout>

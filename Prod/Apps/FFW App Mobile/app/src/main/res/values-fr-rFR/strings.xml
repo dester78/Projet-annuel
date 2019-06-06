@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="welcome_message">Bienvenue</string>
+    <string name="alert_title">Confirmation</string>
+    <string name="alert_disconnect_message">Etes-vous sûre de vouloir vous déconnecter ?</string>
+    <string name="alert_yes">Oui</string>
+    <string name="alert_no">Non</string>
+    <string name="navigation_drawer_open">Ouverture du navigation drawer</string>
+    <string name="navigation_drawer_close">Fermeture du navigation drawer</string>
+    <string name="nav_header_subtitle">Mail de l\'utilisateur</string>
+    <string name="nav_header_desc">Description du header de navigation : icone</string>
+    <string name="hint_pwd">Mot de passe</string>
+    <string name="hint_pwd_confirmation">Confirmation du mot de passe</string>
+    <string name="forumWelcomeMessage">Bienvenue sur le forum ! Cet espace est propice au partage et à l\'entraide entre les membres de la communauté FFW !
+        Profitez ainsi de conseils ou poser vos questions librement tant que vous respecter les règles de bonne conduite du site ;) </string>
+    <string name="newsWelcomeMessage">Bienvenue sur l\'espace news ! Ici vous trouverez toutes
+    les dernières news postées par FFW ! </string>
+    <string name="servicesWelcomeMessage">Bienvenue dans l\'espace service ! Ici vous trouverez tous les services proposés par FFW.
+    Vous pouvez vous y inscrire et les ajoutés à vos favoris.</string>
+    <string name="alert_change_pwd_title">Changer le mot de passe</string>
+    <string name="alert_chaneg_pwd_message">Entrer votre nouveau mot de passe et sa confirmation</string>
+    <string name="connection_mail">Adresse mail</string>
+    <string name="connection_btn">Se connecter</string>
+    <string name="profil_empty_address">Pas d\'adresse</string>
+    <string name="service_registration">S\'inscrire</string>
+    <string name="service_deregistration">Se désinscrire</string>
+</resources>

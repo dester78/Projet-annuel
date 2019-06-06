@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    tools:context=".activities.MainActivity">
+    
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/activity_main_toolbar"
+        android:background="@color/colorSecondary2SuperDark"
+        app:logo="@drawable/logomini"
+        >
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/principal_logo_img"
+        android:src="@drawable/logo"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="40dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Connexion"
+        android:id="@+id/connection_btn"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/colorPrimaryLight"
+        android:text="Inscription"
+        android:id="@+id/inscription_btn"/>
+
+</LinearLayout>

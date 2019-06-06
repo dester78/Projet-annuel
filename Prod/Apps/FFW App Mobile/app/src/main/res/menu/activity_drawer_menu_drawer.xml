@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profil"
+            android:icon="@drawable/icone_profil_24dp"
+            android:title="Mon profil" />
+        <item
+            android:id="@+id/nav_news"
+            android:icon="@drawable/icone_news_24dp"
+            android:title="News FFW" />
+        <item
+            android:id="@+id/nav_prem_services"
+            android:icon="@drawable/icone_prem_services_24dp"
+            android:title="Mes services" />
+        <item
+            android:id="@+id/nav_forum"
+            android:icon="@drawable/icone_forum_24dp"
+            android:title="Forum" />
+
+    </group>
+
+    <item
+        android:id="@+id/nav_disconnect"
+        android:icon="@drawable/icone_power_off_24dp"
+        android:title="Me déconnecter" />
+</menu>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorSecondary2Light"
+    android:paddingTop="10dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/rpn_title_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Titre + Date"
+        android:textColor="#FFFFFF"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/rpn_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="contenu"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="#FFFFFF"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/rpn_author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="author"
+        android:textColor="#FFFFFF"
+        android:textSize="12dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="right|bottom">
+
+        <ViewSwitcher
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rpn_favorite_switcher">
+
+            <ImageButton
+                android:backgroundTint="@color/colorSecondary2Light"
+                android:layout_width="wrap_content"
+                android:id="@+id/rpn_icone_favorite_deselected"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:onClick="like"
+                android:src="@drawable/icone_favorite_border_24dp" />
+
+            <ImageButton
+                android:backgroundTint="@color/colorSecondary2Light"
+                android:layout_width="wrap_content"
+                android:id="@+id/rpn_icone_favorite_selected"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:src="@drawable/icone_favorite_24dp" />
+        </ViewSwitcher>
+        <ViewSwitcher
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rpn_expand_comment_switcher">
+
+            <ImageButton
+                android:backgroundTint="@color/colorSecondary2Light"
+                android:layout_width="wrap_content"
+                android:id="@+id/rpn_expand_more_comment_post"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:src="@drawable/icone_expand_more_24dp" />
+            <ImageButton
+                android:backgroundTint="@color/colorSecondary2Light"
+                android:layout_width="wrap_content"
+                android:id="@+id/rpn_expand_less_comment_post"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:src="@drawable/icone_expand_less_24dp" />
+        </ViewSwitcher>
+    </LinearLayout>
+</LinearLayout>

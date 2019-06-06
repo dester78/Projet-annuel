@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name" translatable="false">FFW App</string>
+
+    <string name="welcome_message">Welcome</string>
+
+    <string name="alert_title">Confirmation</string>
+    <string name="alert_disconnect_message">Do you wanna leave ?</string>
+    <string name="alert_yes">Yes</string>
+    <string name="alert_no">No</string>
+    <string name="title_activity_drawer_menu" translatable="false">DrawerMenuActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title" translatable="false">FFW App</string>
+    <string name="nav_header_subtitle">User\'s mail</string>
+    <string name="nav_header_desc">Description of navigation\'s header : icone</string>
+
+    <string name="forumWelcomeMessage">Bienvenue sur le forum ! Cet espace est propice
+        au partage et à l\'entraide entre les membres de la communauté FFW !
+        Profitez ainsi de conseils ou poser vos questions librement tant que vous
+        respecter les règles de bonne conduite du site ;) </string>
+
+
+    <string name="newsWelcomeMessage">Bienvenue sur l\'espace news ! Ici vous trouverez toutes
+    les dernières news postées par FFW ! </string>
+
+    <string name="servicesWelcomeMessage">Bienvenue dans l\'espace service ! Ici vous trouverez tous les services proposés par FFW.
+    Vous pouvez vous y inscrire et les ajoutés à vos favoris.</string>
+
+    <string name="localhost" translatable="false">http://10.33.253.60</string>
+    <string name="hint_pwd">Password</string>
+    <string name="hint_pwd_confirmation">Password confirmation</string>
+    <string name="alert_change_pwd_title">Change Password</string>
+    <string name="alert_chaneg_pwd_message">Enter your new password and its confirmation</string>
+    <string name="connection_mail">Mail address</string>
+    <string name="connection_btn">Sign in</string>
+    <string name="profil_empty_address">No adress</string>
+    <string name="service_registration">Register</string>
+    <string name="service_deregistration">Deregister</string>
+</resources>
